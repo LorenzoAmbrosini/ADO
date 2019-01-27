@@ -6,7 +6,7 @@ function draw() {
   ellipse(50, 50, 80, 80);
   textAlign(CENTER)
   textSize(70)
-  text('intermezzo', windowWidth/2, windowHeight/2);
+  text('pagina in mezzo', windowWidth/2, windowHeight/2);
 }
 
 function mousePressed() {
