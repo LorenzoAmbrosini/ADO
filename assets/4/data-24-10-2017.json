@@ -1,0 +1,36 @@
+{
+  "number" : 10,
+  "people" : [
+    {
+      "name" : "London"
+    },
+    {
+      "name" : "Brighton"
+    },
+    {
+      "name" : "Manchester"
+    },
+    {
+      "name" : "Birmingham"
+    },
+    {
+      "name" : "Liverpool"
+    },
+    {
+      "name" : "Bristol"
+    },
+    {
+      "name" : "Cambridge"
+    },
+    {
+      "name" : "Canterbury"
+    },
+    {
+      "name" : "Leeds"
+    },
+    {
+      "name" : "Oxford"
+    }
+
+  ]
+}
