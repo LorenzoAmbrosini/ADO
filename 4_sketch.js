@@ -26,12 +26,13 @@ function setup() {
     // properties
     var x = 120;
     var y = i * 30 + 150;
-    var name = loadImage(data.people[i].pic);
+    var pic = loadImage(data.people[i].pic);
+    var name = data.people[i].name;
 
     var colorRandomizer = random(0.4, 1);
 
     // create the ball object and add it to the array
-    var myBall = new Ball(x, y, colorRandomizer, name);
+    var myBall = new Ball(x, y, colorRandomizer, pic, name);
     balls.push(myBall);
   }
 }
@@ -61,10 +62,13 @@ function draw() {
 
 
 
-function Ball(_x, _y, _colorRandomizer, _name) {
+function Ball(_x, _y, _colorRandomizer, _pic, _name) {
 
   this.x = _x;
   this.y = _y;
+  var cityName = _name;
+
+  console.log(cityName);
 
 
   this.display = function(_randomCorrect) {
@@ -73,17 +77,23 @@ function Ball(_x, _y, _colorRandomizer, _name) {
     var bright = _colorRandomizer * lightness(c);
     var col = color(255, 255, 0, bright * 5);
 
-    textSize(20);
 
-      //console.log(_randomCorrect);
-			bright = _randomCorrect * bright;
-	    col = color(255, 255, 0, bright * 10);
-      //fill(col);
-      push()
-      imageMode(CENTER);
-      tint(255, bright * 5);
-      image(_name, windowWidth/2, windowHeight/2, _name.width/1.5, _name.height/1.5);
-      pop();
+
+
+      if(_name == "London"){
+        push()
+        imageMode(CENTER);
+        tint(255, bright * 10 + 200);
+        image(_pic, windowWidth/2, windowHeight/2, _pic.width/1.5, _pic.height/1.5);
+        pop();
+      }
+      else{
+        push()
+        imageMode(CENTER);
+        tint(255, bright * 10);
+        image(_pic, windowWidth/2, windowHeight/2, _pic.width/1.5, _pic.height/1.5);
+        pop();
+      }
 
 }
 }
