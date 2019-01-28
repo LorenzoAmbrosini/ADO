@@ -1,12 +1,16 @@
 var capture;
-var sfondo;
 var data;
+var pannello;
+var scritte;
 
 var balls = [];
 
 function preload() {
   sfondo = loadImage("./assets/4/Departures.png");
-  data = loadJSON('./assets/4/data-24-10-2017.json');
+  data = loadJSON('./assets/4/data.json');
+
+  pannello = loadImage("./assets/4/Images/Sfondo.png");
+  scritte = loadImage("./assets/4/Images/Scritte.png");
 
 }
 
@@ -17,13 +21,12 @@ function setup() {
   capture.hide();
 
   //console.log(data.people.length);
-  for (var i = 0; i < 18; i++) {
+  for (var i = 0; i < 13; i++) {
 
     // properties
     var x = 120;
     var y = i * 30 + 150;
-    var k = round(random(0, 9))
-    var name = data.people[k].name;
+    var name = loadImage(data.people[i].pic);
 
     var colorRandomizer = random(0.4, 1);
 
@@ -37,10 +40,15 @@ function setup() {
 
 function draw() {
 
-  background(0);
-  background(sfondo);
+  background(50);
   //imageMode(CENTER)
   //image(sfondo, windowWidth/2, windowHeight/2, sfondo.width/2, sfondo.height/2);
+
+  push();
+  imageMode(CENTER);
+  image(pannello, windowWidth/2, windowHeight/2, pannello.width/1.5, pannello.height/1.5);
+  image(scritte, windowWidth/2, windowHeight/2, pannello.width/1.5, pannello.height/1.5);
+  pop();
 
 
   for (var j = 0; j < balls.length; j++) {
@@ -66,17 +74,16 @@ function Ball(_x, _y, _colorRandomizer, _name) {
     var col = color(255, 255, 0, bright * 5);
 
     textSize(20);
-    if (_name == "London") {
 
-      console.log(_randomCorrect);
-			bright = _randomCorrect * bright + 30;
+      //console.log(_randomCorrect);
+			bright = _randomCorrect * bright;
 	    col = color(255, 255, 0, bright * 10);
-      fill(col);
-      text(_name, this.x, this.y);
-    } else {
-      fill(col);
-      text(_name, this.x, this.y);
-    }
+      //fill(col);
+      push()
+      imageMode(CENTER);
+      tint(255, bright * 5);
+      image(_name, windowWidth/2, windowHeight/2, _name.width/1.5, _name.height/1.5);
+      pop();
 
-  }
+}
 }
