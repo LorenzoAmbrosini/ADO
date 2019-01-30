@@ -71,6 +71,5 @@ if ( song.isPlaying() ) { // .isPlaying() returns a boolean
     song.play();
     background(0,255,0);
 
-
   }
 }
