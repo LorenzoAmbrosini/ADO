@@ -12,6 +12,6 @@ function draw() {
 function mousePressed() {
   if ( mouseX <= 80 &&
        mouseY <= 80){
-    window.open("4_microfono.html", "_self");
+    window.open("4_webcam.html", "_self");
   }
 }
