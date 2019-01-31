@@ -1,0 +1,111 @@
+{
+  "number" : 15,
+  "people" : [
+    {
+      "name" : "Glasgow",
+      "time" : "12:08",
+      "code" : "GL591",
+      "platform" : "13",
+      "status" : "ON TIME"
+    },
+    {
+      "name" : "London",
+      "time" : "12:24",
+      "code" : "LN880",
+      "platform" : "02",
+      "status" : "CANCELLED"
+    },
+    {
+      "name" : "Heathrow",
+      "time" : "12.40",
+      "code" : "HT348",
+      "platform" : "10",
+      "status" : "ON TIME"
+    },
+    {
+      "name" : "Brighton",
+      "time" : "12:45",
+      "code" : "BR275",
+      "platform" : "05",
+      "status" : "ON TIME"
+    },
+    {
+      "name" : "Manchester",
+      "time" : "13:05",
+      "code" : "MN832",
+      "platform" : "07",
+      "status" : "ON TIME"
+    },
+    {
+      "name" : "Bristol",
+      "time" : "13:16",
+      "code" : "BL918",
+      "platform" : "11",
+      "status" : "ON TIME"
+    },
+    {
+      "name" : "London",
+      "time" : "13:24",
+      "code" : "LN885",
+      "platform" : "01",
+      "status" : "CANCELLED"
+    },
+    {
+      "name" : "Heathrow",
+      "time" : "13:40",
+      "code" : "HT350",
+      "platform" : "12",
+      "status" : "ON TIME"
+    },
+    {
+      "name" : "Nottingham",
+      "time" : "13:50",
+      "code" : "GL600",
+      "platform" : "09",
+      "status" : "ON TIME"
+    },
+    {
+      "name" : "Cambridge",
+      "time" : "14:05",
+      "code" : "CB295",
+      "platform" : "05",
+      "status" : "ON TIME"
+    },
+    {
+      "name" : "Southampton",
+      "time" : "14:11",
+      "code" : "SH295",
+      "platform" : "09",
+      "status" : "ON TIME"
+    },
+    {
+      "name" : "Birmingham",
+      "time" : "14:15",
+      "code" : "BH295",
+      "platform" : "11",
+      "status" : "ON TIME"
+    },
+    {
+      "name" : "London",
+      "time" : "14:23",
+      "code" : "BR295",
+      "platform" : "01",
+      "status" : "CANCELLED"
+    },
+    {
+      "name" : "Liverpool",
+      "time" : "14:28",
+      "code" : "LP295",
+      "platform" : "07",
+      "status" : "ON TIME"
+    },
+    {
+      "name" : "Edinburgh",
+      "time" : "14:05",
+      "code" : "BR295",
+      "platform" : "05",
+      "status" : "ON TIME"
+    }
+
+  ]
+}

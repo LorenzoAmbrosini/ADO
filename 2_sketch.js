@@ -6,7 +6,7 @@ var balls = [];
 
 function preload() {
   sfondo = loadImage("./assets/4/Departures.png");
-  data = loadJSON('./assets/4/data-24-10-2017.json');
+  data = loadJSON('./assets/4/data_train.json');
 
 }
 
@@ -17,13 +17,12 @@ function setup() {
   capture.hide();
 
   //console.log(data.people.length);
-  for (var i = 0; i < 18; i++) {
+  for (var i = 0; i < 14; i++) {
 
     // properties
     var x = 120;
-    var y = i * 30 + 150;
-    var k = round(random(0, 9))
-    var name = data.people[k].name;
+    var y = i * 30 + 200;
+    var name = data.people[i].name;
 
     var colorRandomizer = random(0.4, 1);
 
@@ -68,13 +67,14 @@ function Ball(_x, _y, _colorRandomizer, _name) {
     textSize(20);
     if (_name == "London") {
 
-      console.log(_randomCorrect);
+      //console.log(_randomCorrect);
       bright = _randomCorrect * bright + 30;
       col = color(255, 255, 0, bright * 10);
       fill(col);
       text(_name, this.x, this.y);
     } else {
       fill(col);
+      textFont('led')
       text(_name, this.x, this.y);
     }
 

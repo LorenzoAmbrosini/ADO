@@ -62,7 +62,7 @@ function mousePressed() {
     mouseY >= height / 2 + 130 &&
     mouseY <= height / 2 + 130 + 60)
 
-    window.open("2_microfono.html", "_self");
+    window.open("2_webcam.html", "_self");
 }
 
 
