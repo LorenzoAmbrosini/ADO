@@ -5,7 +5,6 @@ var data;
 var cities = [];
 
 function preload() {
-  sfondo = loadImage("./assets/4/Departures.png");
   data = loadJSON('./assets/4/data_train.json');
 
 }
