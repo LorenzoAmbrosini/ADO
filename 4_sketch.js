@@ -52,7 +52,7 @@ setInterval(countdown, 1000);
   fill(166,237,247);
 noStroke();
 rectMode(CENTER);
-rect(width/2 + 632, height/2 - 296, 40, 40)
+  rect(width/2 + 636, height/2 - 300, 44, 44)
 
 }
 
@@ -71,6 +71,21 @@ function draw()
   textSize(30);
   fill("white");// why draw when you can talk?
 }
+
+function countdown (){
+  if (counter > 0 ) {
+    counter--;
+    fill(166,237,247);
+  noStroke();
+  rectMode(CENTER);
+  rect(width/2 + 636, height/2 - 300, 46, 46);
+  }
+  if (counter == 0) {
+   window.open("2_webcam.html", "_self")
+  }
+}
+
+
 
 function backgroundImage(imgBackground) {
   push();
@@ -98,16 +113,17 @@ function backgroundImage(imgBackground) {
 
 
 
+
 function showResult(){
   if (myRec.onResult) {
     textAlign(CENTER);
-    fill("white");
+
     rect(width/2 + 130,height/2-225,470,100);
     fill("blue");
     textAlign(LEFT);
     textSize(25);
       text(myRec.resultString, (width/2 + 145 ), height/2 - 225, 470,100);
-
+  fill(166,237,247);
   }
 }
 
@@ -127,17 +143,4 @@ function mousePressed() {
 
 };
 
-}
-
-
-function countdown (){
-  if (counter > 0 ) {
-    counter--;
-    fill(166,237,247);
-    rectMode(CENTER);
-    rect(width/2 + 632, height/2 - 296, 40, 40)
-  }
-  if (counter == 0) {
-   window.open("2_webcam.html", "_self")
-  }
 }
