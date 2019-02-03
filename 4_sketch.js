@@ -1,3 +1,12 @@
+var frameTime = 0;
+var clockTime = 0;
+var clockSwitch = 1;
+var counter = 25;
+var b;
+var x, y;
+var variabile =1;
+
+
 var myRec = new p5.SpeechRec(); // new P5.SpeechRec object
 var song;
 myRec.continuous = true; // do continuous recognition
@@ -11,13 +20,13 @@ mySpeech.setLang('en-UK');
 
 
 function preload() {
- song = loadSound('./assets/2/speaking.mp3');
+ song = loadSound('speaking.mp3');
 }
 
 function setup()
 {
   // graphics stuff:
-
+  frameRate(30)
   createCanvas(windowWidth, windowHeight);
 
   fill(0, 0, 0, 255);
@@ -35,41 +44,89 @@ mySpeech.setPitch(1);
 
 song.setVolume(0.3);
 
-
+setInterval(countdown, 1000);
+background("green");
+fill("green");
+noStroke();
+rectMode(CENTER);
+rect(width/2, height/2, 80,80);
 
 }
 
 function draw()
 {
 
-    ellipse(50, 50, 80, 80);
+  text(counter, width/2, height/2, x, y);
+  fill(255, 255, 255);
+  textSize(30);
+
+  textSize(30);
+  fill("white");
+  textAlign(CENTER);
+  text('Press Mouse to start talk with the driver', width/2, height/2 - 150);
+    text('With noises is difficult to understand what you say so keep your voice louder', width/2, height/2 - 120);
+  // why draw when you can talk?
 }
 
 function activate() {
 
 }
 
-function showResult()
-{
 
-    background(192, 255, 192);
-if (myRec.onResult) {
-  textAlign(CENTER);
-    text(myRec.resultString, (width/2) - 300, (height/2) - 100 ,600,600)
+/* function showResult(){
+  if (myRec.onResult) {
+  b = height/2;
+  for (let i = 0; i < 20; i++) {
+    textAlign(CENTER);
+      text(myRec.resultString, (width/2 ), b, 600,600)
+    b += 20;
   }
-
+  }
 }
 
+*/
+
+
+
+
+function showResult(){
+  if (myRec.onResult) {
+    textAlign(CENTER);
+    fill("blue");
+    rect(width/2,height/2-250,600,100);
+    fill("white");
+      text(myRec.resultString, (width/2 ), height/2+50, 600,600);
+
+  }
+}
+
+
 function mousePressed() {
-if ( song.isPlaying() ) { // .isPlaying() returns a boolean
-    song.stop();
-    background(255,0,0);
-  } else {
+
+
+ if (variabile === 1) {
 
     mySpeech.speak('Hey there! Where do you wanna go?');
     myRec.start();
     song.play();
-    background(0,255,0);
+    variabile = 2;
 
+
+
+
+};
+
+}
+
+
+function countdown (){
+  if (counter > 0 ) {
+    counter--;
+    fill("blue");
+    rectMode(CENTER);
+    rect(width/2, height/2, 80, 80)
+  }
+  if (counter == 0) {
+  remove();
   }
 }
