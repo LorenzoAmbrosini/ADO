@@ -10,7 +10,7 @@ var minuti;
 var cities = [];
 
 function preload() {
-  data = loadJSON('./assets/4/data_train.json');
+  data = loadJSON('./assets/2/data_train.json');
 
 }
 
@@ -32,10 +32,9 @@ function setup() {
     var platform = data.people[i].platform;
     var status = data.people[i].status;
 
-    var colorRandomizer = random(0.5, 1);
 
     // create the City object and add it to the array
-    var myCity = new City(x, y, colorRandomizer, name, time, code, platform, status);
+    var myCity = new City(x, y, name, time, code, platform, status);
     cities.push(myCity);
   }
 }
@@ -63,12 +62,12 @@ function draw() {
 
   push()
   fill(255);
-  drawingContext.font = 'bold 25px Helvetica';
-  text("Time", x, 170);
-  text("Destination", x + 150, 170);
-  text("Number", x + 560, 170);
-  text("Plat.", x + 700, 170);
-  text("Status", x + 800, 170);
+  drawingContext.font = 'bold 18px Helvetica';
+  text("TIME", x, 180);
+  text("DESTINATION", x + 150, 180);
+  text("NUMBER", x + 560, 180);
+  text("PLAT.", x + 700, 180);
+  text("STATUS", x + 800, 180);
 
   pop();
 
@@ -95,7 +94,7 @@ function draw() {
 
 
 
-function City(_x, _y, _colorRandomizer, _name, _time, _code, _platform, _status) {
+function City(_x, _y, _name, _time, _code, _platform, _status) {
 
   this.x = _x;
   this.y = _y;
@@ -104,14 +103,16 @@ function City(_x, _y, _colorRandomizer, _name, _time, _code, _platform, _status)
   this.display = function() {
 
     var c = capture.get(noise(capture.width / 2), noise(capture.height / 2));
-    var bright = _colorRandomizer * lightness(c);
+
+    var colorRandomizer = random(0.6, 1);
+    var bright = colorRandomizer * lightness(c);
     var correctBright = map(bright, 0, 25, 0, 255);
 
     var col = color(255, 200, 0, correctBright);
-    var colLondon = color(255, 200, 0, correctBright + 150);
+    var colLondon = color(255, 200, 0, correctBright + 200);
 
     var oraTreni = ora + 1;
-    console.log(oraTreni);
+    //console.log(oraTreni);
 
     textFont('led');
     textSize(20);
