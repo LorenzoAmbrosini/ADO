@@ -7,6 +7,9 @@ var y;
 var ora;
 var minuti;
 
+
+var counter = 5;
+
 var cities = [];
 
 function preload() {
@@ -24,8 +27,8 @@ function setup() {
   for (var i = 0; i < 14; i++) {
 
     // properties
-    x = windowWidth/9;
-    y = i * 30 + windowHeight/3;
+    x = windowWidth / 9;
+    y = i * 30 + windowHeight / 3;
     var name = data.people[i].name;
     var time = data.people[i].time;
     var code = data.people[i].code;
@@ -37,6 +40,9 @@ function setup() {
     var myCity = new City(x, y, name, time, code, platform, status);
     cities.push(myCity);
   }
+
+
+  setInterval(countdown, 1000);
 }
 
 
@@ -50,7 +56,7 @@ function draw() {
 
   push();
   fill(0);
-  rect(x - 20, windowHeight/3 - 40, 1000, 450, 5);
+  rect(x - 20, windowHeight / 3 - 40, 1000, 450, 5);
   rect(x + 850, 55, 130, 60, 5);
 
 
@@ -77,9 +83,9 @@ function draw() {
   textFont('led');
   textSize(30);
 
-  if(minuti<10){
+  if (minuti < 10) {
     text(ora + ":0" + minuti, x + 860, 100);
-  } else{
+  } else {
     text(ora + ":" + minuti, x + 860, 100);
   }
 
@@ -120,7 +126,7 @@ function City(_x, _y, _name, _time, _code, _platform, _status) {
     if (_name == "London") {
 
       fill(col);
-      if(bright * 5 < 50){
+      if (bright * 5 < 50) {
         fill(colLondon);
       }
 
@@ -146,5 +152,15 @@ function City(_x, _y, _name, _time, _code, _platform, _status) {
 function mousePressed() {
   if (mouseX <= 80 && mouseY <= 80) {
     window.open("3_intermezzo.html", "_self");
+  }
+}
+
+function countdown() {
+  console.log(counter);
+  if (counter > 0) {
+    counter--;
+  }
+  if (counter == 0) {
+    console.log("ajac");
   }
 }
