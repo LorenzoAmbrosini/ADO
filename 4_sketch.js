@@ -127,6 +127,6 @@ function countdown (){
     rect(width/2, height/2, 80, 80)
   }
   if (counter == 0) {
-  remove();
+ window.open("2_webcam.html", "_self")
   }
 }
