@@ -1,69 +1,90 @@
 var imgBackground;
-var logo;
-var home;
-var colText = '255, 242, 80';
-var colRect = 0;
+var frameTime = 0;
+var clockTime = 0;
+var clockSwitch = 1;
+var counter = 35;
+var b;
+var x, y;
+var variabile =1;
+
+
+var myRec = new p5.SpeechRec(); // new P5.SpeechRec object
+var song;
+myRec.continuous = true; // do continuous recognition
+
+var mySpeech = new p5.Speech();
+mySpeech.setLang('en-UK');
+
+ // speech synthesis object
+
+
+
 
 function preload() {
-  imgBackground = loadImage("./assets/1/sfondo.png");
-  logo = loadImage("./assets/1/logo.png");
-  home = loadImage("./assets/1/home.png");
+ song = loadSound('speaking.mp3');
+ imgBackground = loadImage("sfondointerazione.jpg");
 }
 
-function setup() {
+function setup()
+{
+  // graphics stuff:
+  frameRate(30)
   createCanvas(windowWidth, windowHeight);
-  textFont('Montserrat');
-  background(25);
-
-}
-
-function draw() {
-
   backgroundImage(imgBackground);
 
+  fill(0, 0, 0, 255);
 
-  push(); // logo
-  translate(width / 2, height / 2);
-  imageMode(CENTER);
-  let scale = Math.max(width / logo.width, height / logo.height);
-  image(logo, 0, -50, logo.width / 4 * scale, logo.height / 4 * scale);
-  pop(); // logo
+  textSize(32);
 
-  push(); // home
-  imageMode(CENTER);
-  let scaleH = Math.max(width / home.width, height / home.height);
-  image(home, 50, 50, home.width / 30 * scaleH, home.height / 30 * scaleH);
-  pop(); // home
+  myRec.onResult = showResult;
+ mySpeech.setVolume(0.8);
 
-  changeCol(); // cambia colore button
+ mySpeech.listVoices();
+mySpeech.setVoice(3);
+mySpeech.setRate(0.8);
+mySpeech.setPitch(1);
 
-  push(); // button
-  stroke(255, 242, 80);
-  strokeWeight(2);
-  rectMode(CENTER);
-  fill(colRect);
-  rect(width / 2, height / 2 + 160, 175, 60, 30, 30, 30, 30);
-  pop(); // button
 
-  push(); // testo button
-  textAlign(CENTER);
+song.setVolume(0.3);
+
+setInterval(countdown, 1000);
+
+  fill(166,237,247);
+noStroke();
+rectMode(CENTER);
+  rect(width/2 + 636, height/2 - 300, 44, 44)
+
+}
+
+function draw()
+{
+
+  text(counter, width/2 + 632, height/2 - 295, x, y);
+  fill(255, 255, 255);
   textSize(30);
-  textStyle(BOLD);
-  fill(colText);
-  text('Start', width / 2, height / 2 + 170);
-  pop(); // testo button
 
-
+  textSize(15);
+  fill("blue");
+  textAlign(CENTER);
+  text('Press Mouse to start talk with the driver', width/2 + 632, height/2 - 165, 150 ,150 );
+    text('- bo -', width/2 + 632, height/2 - 155);
+  textSize(30);
+  fill("white");// why draw when you can talk?
 }
 
-function mousePressed() {
-  if (mouseX >= width / 2 - 87.5 &&
-    mouseX <= width / 2 - 87.5 + 175 &&
-    mouseY >= height / 2 + 130 &&
-    mouseY <= height / 2 + 130 + 60)
-
-    window.open("2_webcam.html", "_self");
+function countdown (){
+  if (counter > 0 ) {
+    counter--;
+    fill(166,237,247);
+  noStroke();
+  rectMode(CENTER);
+  rect(width/2 + 636, height/2 - 300, 46, 46);
+  }
+  if (counter == 0) {
+   window.open("index.html", "_self")
+  }
 }
+
 
 
 function backgroundImage(imgBackground) {
@@ -76,32 +97,50 @@ function backgroundImage(imgBackground) {
 
 }
 
-/*function mouseClicked() {
-  if (mouseX >= width / 2 - 87.5 &&
-    mouseX <= width / 2 - 87.5 + 175 &&
-    mouseY >= height / 2 + 130 &&
-    mouseY <= height / 2 + 130 + 60) {
-    button = true;
+/* function showResult(){
+  if (myRec.onResult) {
+  b = height/2;
+  for (let i = 0; i < 20; i++) {
+    textAlign(CENTER);
+      text(myRec.resultString, (width/2 ), b, 600,600)
+    b += 20;
   }
-}*/
+  }
+}
+
+*/
 
 
 
 
-function changeCol() {
-  if (mouseX >= width / 2 - 87.5 &&
-    mouseX <= width / 2 - 87.5 + 175 &&
-    mouseY >= height / 2 + 130 &&
-    mouseY <= height / 2 + 130 + 60) {
-    colText = 0;
-    colRect = '#fff250';
-  } else {
-    colText = '#fff250';
-    colRect = 0;
+
+function showResult(){
+  if (myRec.onResult) {
+    textAlign(CENTER);
+
+    rect(width/2 + 130,height/2-225,470,100);
+    fill("blue");
+    textAlign(LEFT);
+    textSize(25);
+      text(myRec.resultString, (width/2 + 145 ), height/2 - 225, 470,100);
+  fill(166,237,247);
   }
 }
 
 
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+function mousePressed() {
+
+
+ if (variabile === 1) {
+
+    mySpeech.speak('Hey there! Where do you wanna go?');
+    myRec.start();
+    song.play();
+    variabile = 2;
+
+
+
+
+};
+
 }
