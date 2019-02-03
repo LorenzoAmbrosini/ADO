@@ -8,7 +8,7 @@ var ora;
 var minuti;
 
 
-var counter = 5;
+var counter = 30;
 
 var cities = [];
 
@@ -149,11 +149,6 @@ function City(_x, _y, _name, _time, _code, _platform, _status) {
 }
 
 
-function mousePressed() {
-  if (mouseX <= 80 && mouseY <= 80) {
-    window.open("3_intermezzo.html", "_self");
-  }
-}
 
 function countdown() {
   console.log(counter);
@@ -161,6 +156,6 @@ function countdown() {
     counter--;
   }
   if (counter == 0) {
-    console.log("ajac");
+    window.open("3_intermezzo.html", "_self")
   }
 }
