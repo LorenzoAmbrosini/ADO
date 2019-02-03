@@ -138,6 +138,6 @@ function countdown (){
     rect(width/2 + 632, height/2 - 296, 40, 40)
   }
   if (counter == 0) {
-   window.open("index.html", "_self")
+   window.open("2_webcam.html", "_self")
   }
 }
