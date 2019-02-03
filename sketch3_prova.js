@@ -25,7 +25,7 @@ function keyTyped() {
 
   if (key === '1' ) {
 
-    window.open("copia.html", "_self")
+    window.open("4_webcam.html", "_self")
 
   }
 }
