@@ -35,7 +35,7 @@ function setup() {
   background(0);
 
   imageMode(CENTER);
-  image(imgBackground, windowWidth/2, windowHeight/2, 0.7 * imgBackground.width, 0.7 * imgBackground.height);
+  image(imgBackground, windowWidth/2, windowHeight/2, 0.8 * imgBackground.width, 0.8 * imgBackground.height);
 
   fill(0, 0, 0, 255);
 
