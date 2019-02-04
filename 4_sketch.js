@@ -53,14 +53,14 @@ setInterval(countdown, 1000);
 noStroke();
 ellipseMode(CENTER);
 fill("blue");
-  ellipse(windowWidth - 130, windowHeight - 665,70, 70)
+  ellipse(windowWidth - 130,  100,70, 70)
 
 }
 
 function draw()
 {
 textAlign(CENTER);
-  text(counter, windowWidth - 130, windowHeight - 655, x, y)
+  text(counter, windowWidth - 130, 110, x, y)
   fill(255, 255, 255);
   textSize(30);
 
@@ -78,7 +78,7 @@ function countdown (){
     fill("blue");
   noStroke();
   ellipseMode(CENTER);
-  ellipse(windowWidth - 130, windowHeight - 665, 70, 70);
+  ellipse(windowWidth - 130, 100, 70, 70);
   }
   if (counter == 0) {
    window.open("2_webcam.html", "_self")
@@ -117,7 +117,7 @@ function backgroundImage(imgBackground) {
 function showResult(){
   if (myRec.onResult) {
     textAlign(CENTER);
-
+fill("blue");
     rect(width/2 + 130,height/2-225,470,100);
     fill("blue");
     textAlign(LEFT);
@@ -144,3 +144,4 @@ function mousePressed() {
 };
 
 }
+
