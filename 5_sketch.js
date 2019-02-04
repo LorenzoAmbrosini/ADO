@@ -87,6 +87,14 @@ function backgroundImage(imgBackground) {
 
 }
 
+function mousePressed() {
+  if (mouseX >= 0  &&
+    mouseX <= 176 &&
+    mouseY >= 0  &&
+    mouseY <= 172)
+    window.open("index.html", "_self");
+}
+
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
   }
