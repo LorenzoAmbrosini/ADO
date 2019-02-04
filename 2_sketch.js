@@ -1,9 +1,10 @@
+var sketch2 = function(p) {
+
 var capture;
 var sfondo;
 var data;
 var x;
 var y;
-
 var ora;
 var minuti;
 
@@ -16,15 +17,18 @@ var colRect = 0;
 
 var cities = [];
 
-function preload() {
-  data = loadJSON('./assets/2/data_train.json');
+p.preload = function() {
+  data = p.loadJSON('./assets/2/data_train.json');
 
-}
+};
 
-function setup() {
-  frameRate(30);
-  createCanvas(windowWidth, windowHeight);
-  capture = createCapture(VIDEO);
+p.setup = function() {
+
+
+  p.frameRate(30);
+  var canvas =  p.createCanvas(1280, 720);
+  canvas.parent('sketch2');
+  capture = p.createCapture(p.VIDEO);
   capture.size(640, 480);
   capture.hide();
 
@@ -32,8 +36,8 @@ function setup() {
   for (var i = 0; i < 14; i++) {
 
     // properties
-    x = windowWidth / 9;
-    y = i * 30 + windowHeight / 3;
+    x = p.windowWidth / 9;
+    y = i * 30 + p.windowHeight / 3;
     var name = data.people[i].name;
     var time = data.people[i].time;
     var code = data.people[i].code;
@@ -42,7 +46,7 @@ function setup() {
 
 
     // create the City object and add it to the array
-    var myCity = new City(x, y, name, time, code, platform, status);
+    var myCity = new p.City(x, y, name, time, code, platform, status);
     cities.push(myCity);
   }
 
@@ -50,58 +54,63 @@ function setup() {
 
 
 
-}
+};
 
 
 
-function draw() {
+ p.draw = function() {
 
-console.log(interruttore)
-
-
+//console.log(interruttore)
 
 
-  background(30, 29, 29);
-
-  ora = hour();
-  minuti = minute();
-
-  push();
-  fill(0);
-  rect(x - 20, windowHeight / 3 - 40, 1000, 450, 5);
-  rect(x + 850, 55, 130, 60, 5);
 
 
-  push()
-  fill(255, 255, 0);
-  drawingContext.font = 'italic bold 40px Helvetica';
-  text("Departures", x, 100);
-  pop();
+  p.background(30, 29, 29);
 
-  push()
-  fill(255);
-  drawingContext.font = 'bold 18px Helvetica';
-  text("TIME", x, 180);
-  text("DESTINATION", x + 150, 180);
-  text("NUMBER", x + 560, 180);
-  text("PLAT.", x + 700, 180);
-  text("STATUS", x + 800, 180);
+  ora = p.hour();
+  minuti = p.minute();
 
-  pop();
+  p.push();
+  p.fill(0);
+  p.rect(x - 20, p.windowHeight / 3 - 40, 1000, 450, 5);
+  p.rect(x + 850, 55, 130, 60, 5);
 
-  push();
 
-  fill(255, 200, 0);
-  textFont('led');
-  textSize(30);
+  p.push()
+  p.fill(255, 255, 0);
+  p.drawingContext.font = 'italic bold 40px Helvetica';
+  p.text("Departures", x, 100);
+  p.pop();
 
-  if (minuti < 10) {
-    text(ora + ":0" + minuti, x + 860, 100);
-  } else {
-    text(ora + ":" + minuti, x + 860, 100);
+  p.push()
+  p.fill(255);
+  p.drawingContext.font = 'bold 18px Helvetica';
+  p.text("TIME", x, 180);
+  p.text("DESTINATION", x + 150, 180);
+  p.text("NUMBER", x + 560, 180);
+  p.text("PLAT.", x + 700, 180);
+  p.text("STATUS", x + 800, 180);
+
+  p.pop();
+
+  p.push();
+
+  p.fill(255, 200, 0);
+  p.textFont('led');
+  p.textSize(30);
+
+  if (ora < 10){
+    if (minuti < 10) {
+      p.text("0" + ora + ":0" + minuti, x + 860, 100);
+    } else {
+      p.text("0" + ora + ":" + minuti, x + 860, 100);
+      }
+  }
+  else{
+    p.text(ora + ":" + minuti, x + 860, 100);
   }
 
-  pop();
+  p.pop();
 
 
   for (var j = 0; j < cities.length; j++) {
@@ -110,52 +119,52 @@ console.log(interruttore)
 
 
   if(interruttore === 1){
-    push();
-    fill(0, 0, 0, 200);
-    rect(0, 0, windowWidth, windowHeight);
-    pop();
+    p.push();
+    p.fill(0, 0, 0, 200);
+    p.rect(0, 0, 1280, 720);
+    p.pop();
 
-    changeCol()
+    p.changeCol()
 
-    push(); // button
-    stroke(255, 242, 80);
-    strokeWeight(2);
-    rectMode(CENTER);
-    fill(colRect);
-    rect(windowWidth / 2, windowHeight / 2 + 160, 100, 60, 30);
-    pop();
+    p.push(); // button
+    p.stroke(255, 242, 80);
+    p.strokeWeight(2);
+    p.rectMode(p.CENTER);
+    p.fill(colRect);
+    p.rect(p.windowWidth / 2, p.windowHeight / 2 + 160, 100, 60, 30);
+    p.pop();
 
-    push(); // testo button
+    p.push(); // testo button
 
-    textFont('Montserrat');
-    textAlign(CENTER);
-    textSize(30);
-    textStyle(BOLD);
-    fill(colText);
-    text('Ok', windowWidth / 2, windowHeight / 2 + 170);
-    pop(); // testo button
+    p.textFont('Montserrat');
+    p.textAlign(p.CENTER);
+    p.textSize(30);
+    p.textStyle(p.BOLD);
+    p.fill(colText);
+    p.text('Ok', p.windowWidth / 2, p.windowHeight / 2 + 170);
+    p.pop(); // testo button
 
-    push();
-    textFont('Montserrat');
-    rectMode(CENTER)
-    textAlign(CENTER);
-    textSize(20);
-    fill('#fff250');
-    text('Lorem ipsum dolor sit amet, consectetur adipisci elit sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.', windowWidth / 2, windowHeight / 2, 500, 100);
-    pop();
+    p.push();
+    p.textFont('Montserrat');
+    p.rectMode(p.CENTER)
+    p.textAlign(p.CENTER);
+    p.textSize(20);
+    p.fill('#fff250');
+    p.text('Lorem ipsum dolor sit amet, consectetur adipisci elit sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.', p.windowWidth / 2, p.windowHeight / 2, 500, 100);
+    p.pop();
 
 
   }
 
   if(interruttore === 0){
-  countdown();
+  p.countdown();
 }
 
-}
+};
 
 
 
-function City(_x, _y, _name, _time, _code, _platform, _status) {
+ p.City = function(_x, _y, _name, _time, _code, _platform, _status) {
 
   this.x = _x;
   this.y = _y;
@@ -163,62 +172,66 @@ function City(_x, _y, _name, _time, _code, _platform, _status) {
 
   this.display = function() {
 
-    var c = capture.get(noise(capture.width / 2), noise(capture.height / 2));
+    var c = capture.get(p.noise(capture.width / 2), p.noise(capture.height / 2));
 
-    var colorRandomizer = random(0.3, 1);
-    var bright = lightness(c);
-    var correctBright = colorRandomizer *  map(bright, 0, 25, 0, 255);
+    var colorRandomizer = p.random(0.3, 1);
+    var bright = p.lightness(c);
+    var correctBright = colorRandomizer *  p.map(bright, 0, 25, 0, 255);
 
-    var col = color(255, 200, 0, correctBright);
-    var colLondon = color(255, 200, 0, correctBright + 200);
+    var col = p.color(255, 200, 0, correctBright);
+    var colLondon = p.color(255, 200, 0, correctBright + 200);
 
-    var oraTreni = ora + 1;
+    if (ora == 23){
+      var oraTreni = "00";
+    } else{
+      var oraTreni = ora + 1;
+    }
     //console.log(oraTreni);
 
-    textFont('led');
-    textSize(20);
+    p.textFont('led');
+    p.textSize(20);
 
     if (_name == "London") {
 
-      fill(col);
+      p.fill(col);
       if (bright * 5 < 50) {
-        fill(colLondon);
+        p.fill(colLondon);
       }
 
-      text(oraTreni + _time, this.x, this.y);
-      text(_name, this.x + 150, this.y);
-      text(_code, this.x + 560, this.y);
-      text(_platform, this.x + 700, this.y);
-      text(_status, this.x + 800, this.y);
+      p.text(oraTreni + _time, this.x, this.y);
+      p.text(_name, this.x + 150, this.y);
+      p.text(_code, this.x + 560, this.y);
+      p.text(_platform, this.x + 700, this.y);
+      p.text(_status, this.x + 800, this.y);
 
     } else {
-      fill(col);
-      text(oraTreni + _time, this.x, this.y);
-      text(_name, this.x + 150, this.y);
-      text(_code, this.x + 560, this.y);
-      text(_platform, this.x + 700, this.y);
-      text(_status, this.x + 800, this.y);
+      p.fill(col);
+      p.text(oraTreni + _time, this.x, this.y);
+      p.text(_name, this.x + 150, this.y);
+      p.text(_code, this.x + 560, this.y);
+      p.text(_platform, this.x + 700, this.y);
+      p.text(_status, this.x + 800, this.y);
     }
 
   }
-}
+};
 
-function changeCol() {
-  if (mouseX >= width / 2 - 87.5 &&
-    mouseX <= width / 2 - 87.5 + 175 &&
-    mouseY >= height / 2 + 130 &&
-    mouseY <= height / 2 + 130 + 60) {
+ p.changeCol = function() {
+  if (p.mouseX >= p.windowWidth / 2 - 87.5 &&
+    p.mouseX <= p.windowWidth / 2 - 87.5 + 175 &&
+    p.mouseY >= p.windowHeight / 2 + 130 &&
+    p.mouseY <= p.windowHeight / 2 + 130 + 60) {
     colText = 0;
     colRect = '#fff250';
   } else {
     colText = '#fff250';
     colRect = 0;
   }
-}
+};
 
 
 
-function countdown() {
+ p.countdown = function() {
   console.log(counter);
   if (counter > 0) {
     counter--;
@@ -226,16 +239,20 @@ function countdown() {
   if (counter == 0) {
     window.open("3_intermezzo.html", "_self")
   }
-}
+};
 
-function mousePressed(){
-  if (mouseX >= width / 2 - 87.5 &&
-    mouseX <= width / 2 - 87.5 + 175 &&
-    mouseY >= height / 2 + 130 &&
-    mouseY <= height / 2 + 130 + 60) {
-      if (mouseButton == LEFT ) {
+ p.mousePressed = function(){
+  if (p.mouseX >= p.windowWidth / 2 - 87.5 &&
+    p.mouseX <= p.windowWidth / 2 - 87.5 + 175 &&
+    p.mouseY >= p.windowHeight / 2 + 130 &&
+    p.mouseY <= p.windowHeight / 2 + 130 + 60) {
+      if (p.mouseButton == p.LEFT ) {
          interruttore = 0;
          console.log("click");
       }
   }
+};
+
 }
+
+var sketch = new p5(sketch2);
