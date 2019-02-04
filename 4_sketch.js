@@ -24,7 +24,7 @@ mySpeech.setLang('en-UK');
 
 function preload() {
   song = loadSound('assets/4/speaking.mp3');
-  imgBackground = loadImage("assets/4/sfondointerazione.jpg");
+  imgBackground = loadImage("assets/4/sfondointerazionegiusto.jpg");
 }
 
 function setup() {
