@@ -51,9 +51,12 @@ setInterval(countdown, 1000);
 
   fill(166,237,247);
 noStroke();
+
 ellipseMode(CENTER);
 fill("blue");
   ellipse(windowWidth - 130,  100,70, 70)
+rectMode(CENTER);
+
 
 }
 
@@ -117,12 +120,12 @@ function backgroundImage(imgBackground) {
 function showResult(){
   if (myRec.onResult) {
     textAlign(CENTER);
-fill("blue");
-    rect(width/2 + 130,height/2-225,470,100);
+    fill("white");
+        rect(windowWidth - 630, 150,470,100);
     fill("blue");
     textAlign(LEFT);
     textSize(25);
-      text(myRec.resultString, (width/2 + 145 ), height/2 - 225, 470,100);
+      text(myRec.resultString, windowWidth - 630, 150, 470,100);
   fill(166,237,247);
   }
 }
@@ -144,4 +147,3 @@ function mousePressed() {
 };
 
 }
-
