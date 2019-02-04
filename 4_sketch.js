@@ -24,7 +24,7 @@ mySpeech.setLang('en-UK');
 
 function preload() {
   song = loadSound('assets/4/speaking.mp3');
-  imgBackground = loadImage("assets/4/sfondointerazionegiusto.jpg");
+  imgBackground = loadImage("assets/4/sfondointerazione.jpg");
 }
 
 function setup() {
@@ -42,6 +42,7 @@ function setup() {
   textSize(32);
 
   myRec.onResult = showResult;
+
   mySpeech.setVolume(0.8);
 
   mySpeech.listVoices();
@@ -134,13 +135,16 @@ function draw() {
 
   if (interruttore === 0){
     countdown();
+    showResult();
   }
-  console.log(interruttore);
+
+
+  //console.log(interruttore);
 }
 
 function countdown() {
   if (counter > 0) {
-    counter--;
+    //counter--;
 
   }
   if (counter == 0) {
@@ -179,15 +183,16 @@ function backgroundImage(imgBackground) {
 
 function showResult() {
   if (myRec.onResult) {
+    //console.log("STO ASCOLTANDO");
     push()
     rectMode(CORNER)
     textAlign(CENTER);
     fill("white");
-    rect(0.44 * windowWidth, 90, 400, 200);
+    rect(0.43 * windowWidth, 75, 430, 100);
     fill("blue");
     textAlign(LEFT);
     textSize(25);
-    text(myRec.resultString, 0.44 * windowWidth, 90, 450, 300);
+    text(myRec.resultString, 0.43 * windowWidth, 90, 450, 300);
     fill(166, 237, 247);
     pop();
   }
