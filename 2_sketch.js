@@ -8,7 +8,8 @@ var ora;
 var minuti;
 
 
-var counter = 30;
+var counter = 900;
+var interruttore;
 
 var cities = [];
 
@@ -18,6 +19,7 @@ function preload() {
 }
 
 function setup() {
+  frameRate(30);
   createCanvas(windowWidth, windowHeight);
   capture = createCapture(VIDEO);
   capture.size(640, 480);
@@ -41,14 +43,30 @@ function setup() {
     cities.push(myCity);
   }
 
+  interruttore = 1;
 
-  setInterval(countdown, 1000);
+
+
 }
 
 
 
 function draw() {
 
+console.log(interruttore)
+
+
+  if(interruttore === 1){
+    fill('red');
+    ellipse(500, 500, 50, 50);
+
+  }
+
+  if(interruttore === 0){
+
+
+
+  countdown();
   background(30, 29, 29);
 
   ora = hour();
@@ -95,7 +113,7 @@ function draw() {
   for (var j = 0; j < cities.length; j++) {
     cities[j].display();
   }
-
+}
 }
 
 
@@ -158,4 +176,8 @@ function countdown() {
   if (counter == 0) {
     window.open("3_intermezzo.html", "_self")
   }
+}
+function mousePressed(){
+  interruttore = 0;
+  console.log("click");
 }
