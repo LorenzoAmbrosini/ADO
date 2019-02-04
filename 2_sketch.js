@@ -8,7 +8,11 @@ var ora;
 var minuti;
 
 
-var counter = 30;
+var counter = 900;
+var interruttore;
+
+var colText = '255, 242, 80';
+var colRect = 0;
 
 var cities = [];
 
@@ -18,6 +22,7 @@ function preload() {
 }
 
 function setup() {
+  frameRate(30);
   createCanvas(windowWidth, windowHeight);
   capture = createCapture(VIDEO);
   capture.size(640, 480);
@@ -41,13 +46,20 @@ function setup() {
     cities.push(myCity);
   }
 
+  interruttore = 1;
 
-  setInterval(countdown, 1000);
+
+
 }
 
 
 
 function draw() {
+
+console.log(interruttore)
+
+
+
 
   background(30, 29, 29);
 
@@ -96,6 +108,49 @@ function draw() {
     cities[j].display();
   }
 
+
+  if(interruttore === 1){
+    push();
+    fill(0, 0, 0, 200);
+    rect(0, 0, windowWidth, windowHeight);
+    pop();
+
+    changeCol()
+
+    push(); // button
+    stroke(255, 242, 80);
+    strokeWeight(2);
+    rectMode(CENTER);
+    fill(colRect);
+    rect(windowWidth / 2, windowHeight / 2 + 160, 100, 60, 30);
+    pop();
+
+    push(); // testo button
+
+    textFont('Montserrat');
+    textAlign(CENTER);
+    textSize(30);
+    textStyle(BOLD);
+    fill(colText);
+    text('Ok', windowWidth / 2, windowHeight / 2 + 170);
+    pop(); // testo button
+
+    push();
+    textFont('Montserrat');
+    rectMode(CENTER)
+    textAlign(CENTER);
+    textSize(20);
+    fill('#fff250');
+    text('Lorem ipsum dolor sit amet, consectetur adipisci elit sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.', windowWidth / 2, windowHeight / 2, 500, 100);
+    pop();
+
+
+  }
+
+  if(interruttore === 0){
+  countdown();
+}
+
 }
 
 
@@ -110,9 +165,9 @@ function City(_x, _y, _name, _time, _code, _platform, _status) {
 
     var c = capture.get(noise(capture.width / 2), noise(capture.height / 2));
 
-    var colorRandomizer = random(0.6, 1);
-    var bright = colorRandomizer * lightness(c);
-    var correctBright = map(bright, 0, 25, 0, 255);
+    var colorRandomizer = random(0.3, 1);
+    var bright = lightness(c);
+    var correctBright = colorRandomizer *  map(bright, 0, 25, 0, 255);
 
     var col = color(255, 200, 0, correctBright);
     var colLondon = color(255, 200, 0, correctBright + 200);
@@ -148,6 +203,19 @@ function City(_x, _y, _name, _time, _code, _platform, _status) {
   }
 }
 
+function changeCol() {
+  if (mouseX >= width / 2 - 87.5 &&
+    mouseX <= width / 2 - 87.5 + 175 &&
+    mouseY >= height / 2 + 130 &&
+    mouseY <= height / 2 + 130 + 60) {
+    colText = 0;
+    colRect = '#fff250';
+  } else {
+    colText = '#fff250';
+    colRect = 0;
+  }
+}
+
 
 
 function countdown() {
@@ -157,5 +225,17 @@ function countdown() {
   }
   if (counter == 0) {
     window.open("3_intermezzo.html", "_self")
+  }
+}
+
+function mousePressed(){
+  if (mouseX >= width / 2 - 87.5 &&
+    mouseX <= width / 2 - 87.5 + 175 &&
+    mouseY >= height / 2 + 130 &&
+    mouseY <= height / 2 + 130 + 60) {
+      if (mouseButton == LEFT ) {
+         interruttore = 0;
+         console.log("click");
+      }
   }
 }
