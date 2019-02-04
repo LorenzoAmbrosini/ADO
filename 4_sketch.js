@@ -2,7 +2,7 @@ var imgBackground;
 var frameTime = 0;
 var clockTime = 0;
 var clockSwitch = 1;
-var counter = 900;
+var counter = 600;
 var b;
 var x, y;
 var variabile = 1;
@@ -144,11 +144,11 @@ function draw() {
 
 function countdown() {
   if (counter > 0) {
-    //counter--;
+    counter--;
 
   }
   if (counter == 0) {
-    window.open("2_webcam.html", "_self")
+    window.open("5_final.html", "_self")
   }
 }
 
@@ -164,21 +164,6 @@ function backgroundImage(imgBackground) {
 
 }
 
-/* function showResult(){
-  if (myRec.onResult) {
-  b = height/2;
-  for (let i = 0; i < 20; i++) {
-    textAlign(CENTER);
-      text(myRec.resultString, (width/2 ), b, 600,600)
-    b += 20;
-  }
-  }
-}
-
-*/
-
-
-
 
 
 function showResult() {
@@ -189,7 +174,7 @@ function showResult() {
     textAlign(CENTER);
     fill("white");
     rect(0.43 * windowWidth, 75, 430, 100);
-    fill("blue");
+    fill("black");
     textAlign(LEFT);
     textSize(25);
     text(myRec.resultString, 0.43 * windowWidth, 90, 450, 300);

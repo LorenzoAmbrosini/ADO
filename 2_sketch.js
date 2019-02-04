@@ -8,7 +8,7 @@ var ora;
 var minuti;
 
 
-var counter = 900;
+var counter = 600;
 var interruttore;
 
 var colText = '255, 242, 80';
