@@ -131,7 +131,7 @@ function showResult() {
     textAlign(LEFT);
     textSize(25);
     rectMode(CORNER)
-    text(myRec.resultString, 0.44 * windowWidth, 120, 400, 300);
+    text(myRec.resultString, 0.44 * windowWidth, 90, 400, 300);
     fill(166, 237, 247);
     pop();
   }
