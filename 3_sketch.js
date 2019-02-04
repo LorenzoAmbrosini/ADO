@@ -1,17 +1,46 @@
-function setup() {
-   createCanvas(windowWidth, windowHeight)
+var imgBackground;
+
+function preload() {
+  imgBackground = loadImage("backtaxi.jpg");
 }
 
-function draw() {
-  ellipse(50, 50, 80, 80);
-  textAlign(CENTER)
-  textSize(70)
-  text('pagina in mezzo', windowWidth/2, windowHeight/2);
+function setup(){
+
+
+  // graphics stuff:
+
+  createCanvas(windowWidth, windowHeight);
+
+
+
+
 }
 
-function mousePressed() {
-  if ( mouseX <= 80 &&
-       mouseY <= 80){
-    window.open("4_webcam.html", "_self");
+function draw()
+{
+ backgroundImage(imgBackground);
+}
+
+function keyTyped() {
+
+  if (key === '1' ) {
+
+    window.open("4_webcam.html", "_self")
+
   }
+}
+
+
+function backgroundImage(imgBackground) {
+  push();
+  translate(width / 2, height / 2);
+  imageMode(CENTER);
+  let scale = Math.max(width / imgBackground.width, height / imgBackground.height);
+  image(imgBackground, 0, 0, imgBackground.width * scale, imgBackground.height * scale);
+  pop();
+
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }

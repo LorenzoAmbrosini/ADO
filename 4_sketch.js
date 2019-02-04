@@ -5,7 +5,7 @@ var clockSwitch = 1;
 var counter = 35;
 var b;
 var x, y;
-var variabile =1;
+var variabile = 1;
 
 
 var myRec = new p5.SpeechRec(); // new P5.SpeechRec object
@@ -15,54 +15,55 @@ myRec.continuous = true; // do continuous recognition
 var mySpeech = new p5.Speech();
 mySpeech.setLang('en-UK');
 
- // speech synthesis object
+// speech synthesis object
 
 
 
 
 function preload() {
- song = loadSound('speaking.mp3');
- imgBackground = loadImage("sfondointerazione.jpg");
+  song = loadSound('assets/4/speaking.mp3');
+  imgBackground = loadImage("assets/4/sfondointerazione.jpg");
 }
 
-function setup()
-{
+function setup() {
   // graphics stuff:
   frameRate(30)
   createCanvas(windowWidth, windowHeight);
-  backgroundImage(imgBackground);
+  background(0);
+
+  imageMode(CENTER);
+  image(imgBackground, windowWidth/2, windowHeight/2, windowWidth, windowHeight);
 
   fill(0, 0, 0, 255);
 
   textSize(32);
 
   myRec.onResult = showResult;
- mySpeech.setVolume(0.8);
+  mySpeech.setVolume(0.8);
 
- mySpeech.listVoices();
-mySpeech.setVoice(3);
-mySpeech.setRate(0.8);
-mySpeech.setPitch(1);
+  mySpeech.listVoices();
+  mySpeech.setVoice(3);
+  mySpeech.setRate(0.8);
+  mySpeech.setPitch(1);
 
 
-song.setVolume(0.3);
+  song.setVolume(0.3);
 
-setInterval(countdown, 1000);
+  setInterval(countdown, 1000);
 
-  fill(166,237,247);
-noStroke();
+  fill(166, 237, 247);
+  noStroke();
 
-ellipseMode(CENTER);
-fill("blue");
-  ellipse(windowWidth - 130,  100,70, 70)
-rectMode(CENTER);
+  ellipseMode(CENTER);
+  fill("blue");
+  ellipse(windowWidth - 130, 100, 70, 70)
+  rectMode(CENTER);
 
 
 }
 
-function draw()
-{
-textAlign(CENTER);
+function draw() {
+  textAlign(CENTER);
   text(counter, windowWidth - 130, 110, x, y)
   fill(255, 255, 255);
   textSize(30);
@@ -72,19 +73,19 @@ textAlign(CENTER);
   textAlign(CENTER);
 
   textSize(30);
-  fill("white");// why draw when you can talk?
+  fill("white"); // why draw when you can talk?
 }
 
-function countdown (){
-  if (counter > 0 ) {
+function countdown() {
+  if (counter > 0) {
     counter--;
     fill("blue");
-  noStroke();
-  ellipseMode(CENTER);
-  ellipse(windowWidth - 130, 100, 70, 70);
+    noStroke();
+    ellipseMode(CENTER);
+    ellipse(windowWidth - 130, 100, 70, 70);
   }
   if (counter == 0) {
-   window.open("2_webcam.html", "_self")
+    window.open("2_webcam.html", "_self")
   }
 }
 
@@ -117,16 +118,19 @@ function backgroundImage(imgBackground) {
 
 
 
-function showResult(){
+function showResult() {
   if (myRec.onResult) {
+    push()
     textAlign(CENTER);
     fill("white");
-        rect(windowWidth - 630, 150,470,100);
+    //rect(windowWidth - 630, 150, 470, 100);
     fill("blue");
     textAlign(LEFT);
     textSize(25);
-      text(myRec.resultString, windowWidth - 630, 150, 470,100);
-  fill(166,237,247);
+    rectMode(CORNER)
+    text(myRec.resultString, 0.44 * windowWidth, 120, 400, 300);
+    fill(166, 237, 247);
+    pop();
   }
 }
 
@@ -134,7 +138,7 @@ function showResult(){
 function mousePressed() {
 
 
- if (variabile === 1) {
+  if (variabile === 1) {
 
     mySpeech.speak('Hey there! Where do you wanna go?');
     myRec.start();
@@ -144,6 +148,6 @@ function mousePressed() {
 
 
 
-};
+  };
 
 }
