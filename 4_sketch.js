@@ -51,23 +51,23 @@ setInterval(countdown, 1000);
 
   fill(166,237,247);
 noStroke();
-rectMode(CENTER);
-  rect(width/2 + 636, height/2 - 300, 44, 44)
+ellipseMode(CENTER);
+fill("blue");
+  ellipse(width/2 + 636, height/2 - 300,70, 70)
 
 }
 
 function draw()
 {
-
-  text(counter, width/2 + 632, height/2 - 295, x, y);
+textAlign(CENTER);
+  text(counter,width/2 + 636, height/2 - 290, x, y)
   fill(255, 255, 255);
   textSize(30);
 
   textSize(15);
   fill("blue");
   textAlign(CENTER);
-  text('Press Mouse to start talk with the driver', width/2 + 632, height/2 - 165, 150 ,150 );
-    text('- bo -', width/2 + 632, height/2 - 155);
+
   textSize(30);
   fill("white");// why draw when you can talk?
 }
@@ -75,10 +75,10 @@ function draw()
 function countdown (){
   if (counter > 0 ) {
     counter--;
-    fill(166,237,247);
+    fill("blue");
   noStroke();
-  rectMode(CENTER);
-  rect(width/2 + 636, height/2 - 300, 46, 46);
+  ellipseMode(CENTER);
+  ellipse(width/2 + 636, height/2 - 300, 70, 70);
   }
   if (counter == 0) {
    window.open("2_webcam.html", "_self")
