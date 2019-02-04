@@ -122,7 +122,7 @@ console.log(interruttore)
     strokeWeight(2);
     rectMode(CENTER);
     fill(colRect);
-    rect(width / 2, height / 2 + 160, 100, 60, 30);
+    rect(windowWidth / 2, windowHeight / 2 + 160, 100, 60, 30);
     pop();
 
     push(); // testo button
@@ -132,15 +132,16 @@ console.log(interruttore)
     textSize(30);
     textStyle(BOLD);
     fill(colText);
-    text('Ok', width / 2, height / 2 + 170);
+    text('Ok', windowWidth / 2, windowHeight / 2 + 170);
     pop(); // testo button
 
     push();
     textFont('Montserrat');
+    rectMode(CENTER)
     textAlign(CENTER);
     textSize(20);
     fill('#fff250');
-    text('Lorem ipsum dolor sit amet, consectetur adipisci elit sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.', width / 2 - 350, height / 2 - 50,  width / 2 + 50, height / 2 + 400 );
+    text('Lorem ipsum dolor sit amet, consectetur adipisci elit sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.', windowWidth / 2, windowHeight / 2, 500, 100);
     pop();
 
 

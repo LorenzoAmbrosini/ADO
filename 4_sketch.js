@@ -26,13 +26,16 @@ function preload() {
 }
 
 function setup() {
+
+  console.log(windowWidth);
+  console.log(windowHeight);
   // graphics stuff:
   frameRate(30)
   createCanvas(windowWidth, windowHeight);
   background(0);
 
   imageMode(CENTER);
-  image(imgBackground, windowWidth/2, windowHeight/2, windowWidth, windowHeight);
+  image(imgBackground, windowWidth/2, windowHeight/2, 0.7 * imgBackground.width, 0.7 * imgBackground.height);
 
   fill(0, 0, 0, 255);
 
