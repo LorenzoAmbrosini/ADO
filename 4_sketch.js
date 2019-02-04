@@ -35,7 +35,7 @@ function setup() {
   background(0);
 
   imageMode(CENTER);
-  image(imgBackground, windowWidth/2, windowHeight/2, 0.8 * imgBackground.width, 0.8 * imgBackground.height);
+  //image(imgBackground, windowWidth/2, windowHeight/2, 0.8 * imgBackground.width, 0.8 * imgBackground.height);
 
   fill(0, 0, 0, 255);
 
@@ -124,14 +124,14 @@ function backgroundImage(imgBackground) {
 function showResult() {
   if (myRec.onResult) {
     push()
+    rectMode(CORNER)
     textAlign(CENTER);
     fill("white");
-    //rect(windowWidth - 630, 150, 470, 100);
+    rect(0.44 * windowWidth, 90, 400, 200);
     fill("blue");
     textAlign(LEFT);
     textSize(25);
-    rectMode(CORNER)
-    text(myRec.resultString, 0.44 * windowWidth, 90, 400, 300);
+    text(myRec.resultString, 0.44 * windowWidth, 90, 450, 300);
     fill(166, 237, 247);
     pop();
   }
