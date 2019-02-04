@@ -227,6 +227,7 @@ function countdown() {
     window.open("3_intermezzo.html", "_self")
   }
 }
+
 function mousePressed(){
   if (mouseX >= width / 2 - 87.5 &&
     mouseX <= width / 2 - 87.5 + 175 &&
