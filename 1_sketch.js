@@ -19,14 +19,8 @@ function setup() {
 
 function draw() {
   backgroundImage(imgBackground);
-  // push(); // logo
-  // translate(width / 2, height / 2);
-  // imageMode(CENTER);
-  // let scale = Math.max(width / logo.width, height / logo.height);
-  // image(logo, 0, -100, logo.width / 4 * scale, logo.height / 4 * scale);
-  // pop(); // logo
 
-
+//logo
   push();
   var x = windowWidth/2;
   var y = windowHeight/2-180 ;
@@ -36,6 +30,7 @@ function draw() {
   imageMode(CENTER);
   image(logo, x, y, logoSize*1.2, logoSize/2);
   pop();
+  //logo
 
 
   changeCol(); // cambia colore button
@@ -63,7 +58,6 @@ function draw() {
   text('Sometimes it\'s hard communicate.',-10, 70);
   text('Sometimes it\'s hard understand.',-10, 120);
   //claim
-
 }
 
 function mousePressed() {
