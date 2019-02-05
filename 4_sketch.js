@@ -1,3 +1,5 @@
+var sketch4 = function(p) {
+
 var imgBackground;
 var frameTime = 0;
 var clockTime = 0;
@@ -22,26 +24,25 @@ mySpeech.setLang('en-UK');
 
 
 
-function preload() {
-  song = loadSound('assets/4/speaking.mp3');
-  imgBackground = loadImage("assets/4/sfondointerazione.jpg");
-}
+ p.preload = function() {
+  song = p.loadSound('assets/4/speaking.mp3');
+  imgBackground = p.loadImage("assets/4/sfondointerazione.jpg");
+};
 
-function setup() {
+ p.setup = function() {
 
-  console.log(windowWidth);
-  console.log(windowHeight);
   // graphics stuff:
-  frameRate(30)
-  createCanvas(windowWidth, windowHeight);
-  background(0);
+  p.frameRate(30)
+  var canvas = p.createCanvas(1152, 648);
+  canvas.parent('sketch4');
+  p.background(0);
 
 
-  fill(0, 0, 0, 255);
+  p.fill(0, 0, 0, 255);
 
-  textSize(32);
+  p.textSize(32);
 
-  myRec.onResult = showResult;
+  myRec.onResult = p.showResult;
 
   mySpeech.setVolume(0.8);
 
@@ -54,95 +55,95 @@ function setup() {
   song.setVolume(0.3);
 
 
-  fill(166, 237, 247);
-  noStroke();
+  p.fill(166, 237, 247);
+  p.noStroke();
 
-  ellipseMode(CENTER);
-  fill("blue");
-  ellipse(windowWidth - 130, 100, 70, 70)
-  rectMode(CENTER);
+  p.ellipseMode(p.CENTER);
+  p.fill("blue");
+  p.ellipse(p.windowWidth - 130, 100, 70, 70)
+  p.rectMode(p.CENTER);
 
   interruttore = 1;
 
 
 }
 
-function draw() {
-  imageMode(CENTER);
-  image(imgBackground, windowWidth/2, windowHeight/2, 0.8 * imgBackground.width, 0.8 * imgBackground.height);
+  p.draw = function() {
+  p.imageMode(p.CENTER);
+  p.image(imgBackground, p.windowWidth/2, p.windowHeight/2, 0.8 * imgBackground.width, 0.8 * imgBackground.height);
 
-  push();
-  fill("blue");
-  noStroke();
-  ellipseMode(CENTER);
-  ellipse(windowWidth - 130, 100, 70, 70);
-  pop();
+  p.push();
+  p.fill("blue");
+  p.noStroke();
+  p.ellipseMode(p.CENTER);
+  p.ellipse(p.windowWidth - 130, 100, 70, 70);
+  p.pop();
 
-  push();
-  textAlign(CENTER);
+  p.push();
+  p.textAlign(p.CENTER);
 
-  textSize(30);
-  fill(255)
-  var correctCounter = round(counter /30);
-  text(correctCounter, windowWidth - 130, 110, x, y)
+  p.textSize(30);
+  p.fill(255)
+  var correctCounter = p.round(counter /30);
+  p.text(correctCounter, p.windowWidth - 130, 110, x, y)
 
-  pop()
+  p.pop()
 
-  textSize(15);
-  fill("blue");
-  textAlign(CENTER);
+  p.textSize(15);
+  p.fill("blue");
+  p.textAlign(p.CENTER);
 
-  textSize(30);
-  fill("white"); // why draw when you can talk?
+  p.textSize(30);
+  p.fill("white"); // why draw when you can talk?
 
   if(interruttore === 1){
-    push();
-    rectMode(CORNER)
-    fill(0, 0, 0, 200);
-    rect(0, 0, windowWidth, windowHeight);
-    pop();
+    p.push();
+    p.rectMode(p.CORNER)
+    p.fill(0, 0, 0, 200);
+    p.rect(0, 0, p.windowWidth, p.windowHeight);
+    p.pop();
 
-    changeCol()
+    p.changeCol()
 
-    push(); // button
-    stroke(255, 242, 80);
-    strokeWeight(2);
-    rectMode(CENTER);
-    fill(colRect);
-    rect(windowWidth / 2, windowHeight / 2 + 160, 100, 60, 30);
-    pop();
+    p.push(); // button
+    p.stroke(255, 242, 80);
+    p.strokeWeight(2);
+    p.rectMode(p.CENTER);
+    p.fill(colRect);
+    p.rect(p.windowWidth / 2, p.windowHeight / 2 + 160, 100, 60, 30);
+    p.pop();
 
-    push(); // testo button
+    p.push(); // testo button
 
-    textFont('Montserrat');
-    textAlign(CENTER);
-    textSize(30);
-    textStyle(BOLD);
-    fill(colText);
-    text('Ok', windowWidth / 2, windowHeight / 2 + 170);
-    pop(); // testo button
+    p.textFont('Montserrat');
+    p.textAlign(p.CENTER);
+    p.textSize(30);
+    p.textStyle(p.BOLD);
+    p.fill(colText);
+    p.text('Ok', p.windowWidth / 2, p.windowHeight / 2 + 170);
+    p.pop(); // testo button
 
-    push();
-    textFont('Montserrat');
-    rectMode(CENTER)
-    textAlign(CENTER);
-    textSize(20);
-    fill('#fff250');
-    text('You were lucky, the taxi you called arrived in perfect time. Now you have to tell the taxi driver your destination, which is the British Museum.\n Speak out loud because of traffic noise and the voices of the citizens are very strong, and pay attention to the time!', windowWidth / 2, windowHeight / 2, 500, 200);
-    pop();
+    p.push();
+    p.textFont('Montserrat');
+    p.rectMode(p.CENTER)
+    p.textAlign(p.CENTER);
+    p.textSize(20);
+    p.fill('#fff250');
+    p.text('You were lucky, the taxi you called arrived in perfect time. Now you have to tell the taxi driver your destination, which is the British Museum.\n Speak out loud because of traffic noise and the voices of the citizens are very strong, and pay attention to the time!', p.windowWidth / 2, p.windowHeight / 2, 500, 200);
+    p.pop();
 
   }
 
   if (interruttore === 0){
-    countdown();
-    showResult();
+    p.countdown();
+    p.showResult();
   }
 
 
   //console.log(interruttore);
 }
 
-function countdown() {
+  p.countdown = function() {
   if (counter > 0) {
     counter--;
 
@@ -154,32 +155,32 @@ function countdown() {
 
 
 
-function backgroundImage(imgBackground) {
-  push();
-  translate(width / 2, height / 2);
-  imageMode(CENTER);
-  let scale = Math.max(width / imgBackground.width, height / imgBackground.height);
-  image(imgBackground, 0, 0, imgBackground.width * scale, imgBackground.height * scale);
-  pop();
+  p.backgroundImage = function(imgBackground) {
+  p.push();
+  p.translate(p.windowWidth / 2, p.windowHeight / 2);
+  p.imageMode(p.CENTER);
+  let scale = Math.max(p.windowWidth / imgBackground.width, p.windowHeight / imgBackground.height);
+  p.image(imgBackground, 0, 0, imgBackground.width * scale, imgBackground.height * scale);
+  p.pop();
 
 }
 
 
 
-function showResult() {
+  p.showResult = function() {
   if (myRec.onResult) {
     //console.log("STO ASCOLTANDO");
-    push()
-    rectMode(CORNER)
-    textAlign(CENTER);
-    fill("white");
-    rect(0.43 * windowWidth, 75, 430, 100);
-    fill("black");
-    textAlign(LEFT);
-    textSize(25);
-    text(myRec.resultString, 0.43 * windowWidth, 90, 450, 300);
-    fill(166, 237, 247);
-    pop();
+    p.push()
+    p.rectMode(p.CORNER)
+    p.textAlign(p.CENTER);
+    p.fill("white");
+    p.rect(0.43 * p.windowWidth, 75, 430, 100);
+    p.fill("black");
+    p.textAlign(p.LEFT);
+    p.textSize(25);
+    p.text(myRec.resultString, 0.43 * p.windowWidth, 90, 450, 300);
+    p.fill(166, 237, 247);
+    p.pop();
   }
 }
 
@@ -187,12 +188,12 @@ function showResult() {
 
 
 
-  function mousePressed(){
-    if (mouseX >= width / 2 - 87.5 &&
-      mouseX <= width / 2 - 87.5 + 175 &&
-      mouseY >= height / 2 + 130 &&
-      mouseY <= height / 2 + 130 + 60) {
-        if (mouseButton == LEFT ) {
+    p.mousePressed = function(){
+    if (p.mouseX >= p.width / 2 - 87.5 &&
+      p.mouseX <= p.width / 2 - 87.5 + 175 &&
+      p.mouseY >= p.height / 2 + 130 &&
+      p.mouseY <= p.height / 2 + 130 + 60) {
+        if (p.mouseButton == p.LEFT ) {
            interruttore = 0;
            console.log("click");
            mySpeech.speak('Hey there! Where do you wanna go?');
@@ -205,19 +206,23 @@ function showResult() {
   }
 
 
-function changeCol() {
-  if (mouseX >= width / 2 - 87.5 &&
-    mouseX <= width / 2 - 87.5 + 175 &&
-    mouseY >= height / 2 + 130 &&
-    mouseY <= height / 2 + 130 + 60) {
-      push();
+  p.changeCol = function() {
+  if (p.mouseX >= p.width / 2 - 87.5 &&
+    p.mouseX <= p.width / 2 - 87.5 + 175 &&
+    p.mouseY >= p.height / 2 + 130 &&
+    p.mouseY <= p.height / 2 + 130 + 60) {
+      p.push();
     colText = 0;
     colRect = '#fff250';
-    pop();
+    p.pop();
   } else {
-    push();
+    p.push();
     colText = '#fff250';
     colRect = 0;
-    pop();
+    p.pop();
   }
 }
+
+}
+
+var sketch = new p5(sketch4);
