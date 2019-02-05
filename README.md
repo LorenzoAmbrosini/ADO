@@ -1,9 +1,13 @@
 ![alt text](https://github.com/drawwithcode/2018-group-work-group-08/blob/master/imgr/logo.PNG)
 # Team members
 Lorenzo Ambrosini : lorenzo.ambrosini@mail.polimi.it, 
+
 Davide Macchi : davidemacchi97@gmail.com, 
+
 Matilde Mammana : matilde.mammana@gmail.com, 
+
 Giorgia Piacentini : giorgia.piacentini@mail.polimi.it
+
 # Course reference and academic year
 Creative Coding 2018/2019 (https://drawwithcode.github.io/)
 Politecnico di Milano - Scuola del Design
