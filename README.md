@@ -8,10 +8,6 @@ Matilde Mammana : matilde.mammana@gmail.com,
 
 Giorgia Piacentini : giorgia.piacentini@mail.polimi.it
 
-# Course reference and academic year
-Creative Coding 2018/2019 (https://drawwithcode.github.io/)
-Politecnico di Milano - Scuola del Design
-Faculty: Michele Mauri, Tommaso Elli
 # img
 < gif dei discorsi/ dei punti di domanda
 # Concept
@@ -47,5 +43,11 @@ vari problemi
 .... bo
 # Credits (third libraries used)
 le librerie, disegni, bla bla 
+
+
+# Course reference and academic year
+Creative Coding 2018/2019 (https://drawwithcode.github.io/)
+Politecnico di Milano - Scuola del Design
+Faculty: Michele Mauri, Tommaso Elli
 
 
