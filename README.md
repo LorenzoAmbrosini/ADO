@@ -26,8 +26,7 @@ On the other hand, it is also difficult to understand an information if we are i
 
 ### The Naming
 
-**`Ado`** significa: rumore, fastidio, confusione, concetto predominante nel nostro progetto.
-Per rendere maggiormente chiaro questo concetto abbiamo scelto degli scenari specifici, dove la comunicare e capire informazioni risulta spesso difficile.
+The term **`Ado`** is used to denote confusion, loss of time and trouble situation. We used this term as our logo naming refering to the fact that send a message and understand an information is often difficult.
 
 ### Our Aim
 Have you ever think about how noise can make your communications
