@@ -30,9 +30,10 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
+  stroke(0);
   textSize(20);
   textAlign(CENTER);
-
+  textFont('Montserrat');
 
   backgroundImage(imgBackground);
 
@@ -49,10 +50,11 @@ function setup() {
   image(imgPhone, windowWidth / 3 - 70, windowHeight - 299, imgPhone.width, imgPhone.height);
   pop(); //phone
 
-  push();
+  push(); //tasti
   ellipseMode(CENTER);
   stroke(0);
   strokeWeight(2);
+  fill(255)
   ellipse(windowWidth / 2 - 270, windowHeight / 2 + 245, 45); //0
   ellipse(windowWidth / 2 - 330, windowHeight / 2 + 35, 45); //1
   ellipse(windowWidth / 2 - 270, windowHeight / 2 + 35, 45); //2
@@ -63,12 +65,15 @@ function setup() {
   ellipse(windowWidth / 2 - 330, windowHeight / 2 + 175, 45); //7
   ellipse(windowWidth / 2 - 270, windowHeight / 2 + 175, 45); //8
   ellipse(windowWidth / 2 - 210, windowHeight / 2 + 175, 45); //9
-  pop();
+  pop(); //tasti
+
+
 }
 
 function draw() {
 
   if (keyIsPressed == false) {
+    push();
     fill(255);
     stroke(0);
     strokeWeight(2);
@@ -76,6 +81,16 @@ function draw() {
     ellipse(windowWidth / 2 - 330, windowHeight / 2 + 35, 45); //1
     ellipse(windowWidth / 2 - 330, windowHeight / 2 + 175, 45); //7
     ellipse(windowWidth / 2 - 270, windowHeight / 2 + 175, 45); //8
+    pop();
+
+    push();
+    stroke(0)
+    text('1', windowWidth / 2 - 330, windowHeight / 2 + 40);
+    text('7', windowWidth / 2 - 330, windowHeight / 2 + 180);
+    text('8', windowWidth / 2 - 270, windowHeight / 2 + 180);
+    text('0', windowWidth / 2 - 270, windowHeight / 2 + 250);
+    pop();
+
   }
 
   if ((keyIsPressed == true) && (key == '0') && (primostep === 0) && (schiaccio === 0)) {
@@ -84,14 +99,10 @@ function draw() {
     fill(200);
     stroke(0);
     strokeWeight(2);
-    ellipse(windowWidth / 2 - 270, windowHeight / 2 + 245, 45);//0
+    ellipse(windowWidth / 2 - 270, windowHeight / 2 + 245, 45); //0
     pop();
 
-    push();
-    noStroke();
-    fill(0);
     text('0', width / 2 - 330, height / 2 - 30);
-    pop();
 
     primostep = 1;
     schiaccio = 1;
@@ -107,36 +118,41 @@ function draw() {
     ellipse(windowWidth / 2 - 330, windowHeight / 2 + 35, 45); //1
     pop();
 
-    push();
-    noStroke();
-    fill(0);
     text('1', width / 3 + 25, height / 2 - 30);
-    pop();
 
     secondostep = 1;
     schiaccioquattro = 1;
 
-
   }
 
   if ((keyIsPressed == true) && (key == '2') && (terzostep === 1)) {
+
     text('2', width / 3 + 100, height / 2);
+
     terzostep = 1;
   }
   if ((keyIsPressed == true) && (key == '3') && (quartostep === 1)) {
+
     text('3', width / 3 + 120, height / 2);
+
     quartostep = 1;
   }
   if ((keyIsPressed == true) && (key == '4') && (quintostep === 1)) {
+
     text('4', width / 3 + 160, height / 2);
+
     quintostep = 1;
   }
   if ((keyIsPressed == true) && (key == '5') && (sestostep === 1)) {
+
     text('5', width / 3 + 140, height / 2);
+
     sestostep = 1;
   }
   if ((keyIsPressed == true) && (key == '6') && (settimostep === 1)) {
+
     text('6', width / 3 + 120, height / 2);
+
     settimostep = 1;
   }
   if ((keyIsPressed == true) && (key == '7') && (ottavostep === 0) && (schiaccio === 1) && (schiacciodue === 1)) {
@@ -148,11 +164,7 @@ function draw() {
     ellipse(windowWidth / 2 - 330, windowHeight / 2 + 175, 45); //7
     pop();
 
-    push();
-    noStroke();
-    fill(0);
     text('7', width / 3, height / 2 - 30);
-    pop();
 
     ottavostep = 1;
     schiacciotre = 1;
@@ -166,27 +178,26 @@ function draw() {
     ellipse(windowWidth / 2 - 270, windowHeight / 2 + 175, 45); //8
     pop();
 
-    push();
-    noStroke();
-    fill(0);
+
     text('8', width / 3 - 25, height / 2 - 30);
-    pop();
 
     nonostep = 1;
     schiacciodue = 1;
   }
   if ((keyIsPressed == true) && (key == '9') && (decimostep === 1)) {
+
     text('9', width / 3 + 180, height / 2);
+
     decimostep = 1;
   }
   if (schiaccioquattro === 1) {
     window.open("4_webcam.html", "_self")
   }
 
-
-  // text tasti
-  push();
-  fill(0);
+  push();// text tasti
+  textSize(20);
+  textAlign(CENTER);
+  textFont('Montserrat');
   noStroke();
   text('1', windowWidth / 2 - 330, windowHeight / 2 + 40);
   text('2', windowWidth / 2 - 270, windowHeight / 2 + 40);
@@ -198,8 +209,8 @@ function draw() {
   text('8', windowWidth / 2 - 270, windowHeight / 2 + 180);
   text('9', windowWidth / 2 - 210, windowHeight / 2 + 180);
   text('0', windowWidth / 2 - 270, windowHeight / 2 + 250);
-  pop();
-  // text tasti
+  pop(); // text tasti
+
 }
 
 
