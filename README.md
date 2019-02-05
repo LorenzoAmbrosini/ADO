@@ -41,9 +41,16 @@ Per le interazioni
 
 vari problemi
 ### Inspirations/References
-.... bo
+
+* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+* [Maven](https://maven.apache.org/) - Dependency Management
+* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+
 ### Credits (third libraries used)
-le librerie, disegni, bla bla 
+We used some p5 libreries:
+* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+* [Maven](https://maven.apache.org/) - Dependency Management
+* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
 
 # Course reference and academic year
