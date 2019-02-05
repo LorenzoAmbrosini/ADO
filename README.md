@@ -21,9 +21,7 @@ In other cases, the concept assumes a metaphorical value and refers to all types
 **Ado** significa: rumore, fastidio, confusione, concetto predominante nel nostro progetto.
 Per rendere maggiormente chiaro questo concetto abbiamo scelto degli scenari specifici, dove la comunicare e capire informazioni risulta spesso difficile.
 
-```
-Primo scenario
-```
+### Primo Scenario
 Il primo scenario che abbiamo scelto è una stazione di treni, luogo molto caotico dove quotidianamente è facile sbagliare treno, destinazione ed orario, per via dell'eccesso di informazioni presenti sui tabelloni, e del caos dovuto alla folla.
 
 ###### Secondo scenario:
