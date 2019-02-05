@@ -17,10 +17,16 @@ var sketch5 = function(p) {
     man = p.loadImage("./assets/5/man.png");
     popup = p.loadImage("./assets/5/popup.png");
     home = p.loadImage("./assets/5/home.png");
+
+
     title = p.loadImage("./assets/5/title.png");
   };
 
   p.setup = function() {
+
+    console.log(home.width / 3);
+    console.log(home.height / 3);
+
 
     p.createCanvas(1152, 648);
     p.textFont('Montserrat');
@@ -48,9 +54,10 @@ var sketch5 = function(p) {
 
 
     p.push(); // home
-    p.imageMode(p.CENTER);
-    p.image(home, 50, 50, home.width / 3, home.height / 3);
+    p.imageMode(p.CORNER);
+    p.image(home, 25, 25, home.width / 3, home.height / 3);
     p.pop(); // home
+
 
     p.push(); //title
     var x = correctCanvasWidth / 2 + 230;
@@ -106,8 +113,17 @@ var sketch5 = function(p) {
     if (p.mouseX >= correctCanvasWidth/2 +130 &&
       p.mouseX <= correctCanvasWidth/2 + 330 &&
       p.mouseY >= correctCanvasHeight/2 + 240 &&
-      p.mouseY <= correctCanvasHeight/2 + 260)
+      p.mouseY <= correctCanvasHeight/2 + 260){
       window.open("https://en.wikipedia.org/wiki/Communication_noise", "_self");
+    }
+
+    if(p.mouseX >= 25 &&
+      p.mouseX <= 25 + 58 &&
+      p.mouseY >= 25 &&
+      p.mouseY <= 25 + 58){
+       window.open("index.html", "_self");
+
+      }
   }
 
   p.changeCol = function() {
