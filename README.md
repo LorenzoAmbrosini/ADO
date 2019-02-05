@@ -52,9 +52,10 @@ vari problemi
 
 ### Credits
 We used some ***p5 libreries***:
-* [p5.dom.min.js](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [p5.sound.min.js](https://maven.apache.org/) - Dependency Management
-* [p5.speech.js](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [p5.dom.min.js](https://p5js.org/reference/#/libraries/p5.dom) - The web framework used
+* [p5.sound.min.js](https://p5js.org/reference/#/libraries/p5.sound) - Dependency Management
+* [p5.speech.js](http://ability.nyu.edu/p5.js-speech/) - Used to generate RSS Feeds
+
 
 
 # Course reference and academic year
