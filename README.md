@@ -8,6 +8,7 @@
 
 **Giorgia Piacentini** : giorgia.piacentini@mail.polimi.it
 
+![alt text](https://github.com/drawwithcode/2018-group-work-group-08/blob/master/imgr/sonicear.jpg)
 
 # Concept
 Have you ever tried to search the web for any kind of news and to notice how many different articles are found to talk about the same information?
