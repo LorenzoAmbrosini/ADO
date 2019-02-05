@@ -21,7 +21,7 @@ function draw() {
   translate(width / 2, height / 2);
   imageMode(CENTER);
   let scale = Math.max(width / logo.width, height / logo.height);
-  image(logo, 0, -50, logo.width / 4 * scale, logo.height / 4 * scale);
+  image(logo, 0, -100, logo.width / 4 * scale, logo.height / 4 * scale);
   pop(); // logo
 
 
@@ -31,15 +31,24 @@ function draw() {
   strokeWeight(2);
   rectMode(CENTER);
   fill(colRect);
-  rect(width / 2, height / 2 + 160, 175, 60, 30, 30, 30, 30);
+  rect(width / 2, height / 2 + 200, 175, 60, 30, 30, 30, 30);
   pop(); // button
   push(); // testo button
   textAlign(CENTER);
   textSize(30);
   textStyle(BOLD);
   fill(colText);
-  text('Start', width / 2, height / 2 + 170);
+  text('Start', width / 2, height / 2 + 210);
   pop(); // testo button
+
+  textAlign(CENTER);
+  translate(width / 2, height / 2);
+  textStyle(BOLD);
+  textSize(35);
+  fill(255, 242, 80);
+  text('Sometimes it\'s hard communicate.',-10, 70);
+  text('Sometimes it\'s hard understand.',-10, 120);
+
 }
 
 function mousePressed() {
