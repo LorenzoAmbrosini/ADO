@@ -66,7 +66,7 @@ We have chosen three different kind of interactions, coherent with our theme.
 ## Code challenges
 We were not masters in using p5.js (then we have become obviously;)) so we learnt to code watching **tutorials and reading some articles.** We don't even always found the perfect solutions for our problem but **we learnt how to solve** them. 
 
-We found out that p5 is not that supported for some kind of stuffs (speech recognition for exemple is not that easy to use) so sometimes find a solution is not that easy in some cases. Then we had problem with input beacuse **not all browsers support the same API** so that our project seems to perfecty work only on Google Chrome.
+We found out that p5 is not that supported for some kind of stuffs (speech recognition for exemple is not that easy to use) so sometimes find a solution is not that easy in some cases. Then we had problem with input beacuse **not all browsers support the same APIs** so that our project seems to perfecty work only on Google Chrome.
 
 
 ## Best Code Results
