@@ -129,7 +129,7 @@ mySpeech.setLang('en-UK');
     p.textAlign(p.CENTER);
     p.textSize(20);
     p.fill('#fff250');
-    p.text('You were lucky, the taxi you called arrived in perfect time. Now you have to tell the taxi driver your destination, which is the British Museum.\n Speak out loud because of traffic noise and the voices of the citizens are very strong, and pay attention to the time!', p.windowWidth / 2, p.windowHeight / 2, 500, 200);
+    p.text('You were lucky, the taxi you called arrived in perfect time. Now you have to tell the taxi driver your destination, which is the British Museum.\n Speak out loud because the traffic noise and the voices of the citizens are very strong, and pay attention to the time!', p.windowWidth / 2, p.windowHeight / 2, 500, 200);
     p.pop();
 
   }

@@ -22,12 +22,12 @@ function draw() {
   //logo
   push();
   var x = windowWidth / 2;
-  var y = windowHeight / 2 - 180;
+  var y = windowHeight / 2 - 100;
   phase = frameCount / 5;
   var sizeOffset = (sin(phase) + 30);
   var logoSize = sizeOffset * maxLogoSize;
   imageMode(CENTER);
-  image(logo, x, y, logoSize * 1.1, logoSize / 2);
+  image(logo, x, y, logoSize/1.5 , logoSize / 3);
   pop();
   //logo
 
@@ -40,6 +40,7 @@ function draw() {
   fill(colRect);
   rect(width / 2, height / 2 + 200, 175, 60, 30, 30, 30, 30);
   pop(); // button
+
   push(); // testo button
   textAlign(CENTER);
   textSize(30);
@@ -52,21 +53,14 @@ function draw() {
   textAlign(CENTER);
   translate(width / 2, height / 2);
   textStyle(BOLD);
-  textSize(35);
+  textSize(25);
   fill(255, 242, 80);
 
   text('Sometimes it\'s hard to communicate', -10, 70);
-  text('Sometimes it\'s hard to understand', -10, 120);
+  text('Sometimes it\'s hard to understand', -10, 110);
   //claim
 }
 
-function mousePressed() {
-  if (mouseX >= width / 2 - 87.5 &&
-    mouseX <= width / 2 - 87.5 + 175 &&
-    mouseY >= height / 2 + 130 &&
-    mouseY <= height / 2 + 130 + 60)
-    window.open("2_webcam.html", "_self");
-}
 
 
 function backgroundImage(imgBackground) {
@@ -79,6 +73,14 @@ function backgroundImage(imgBackground) {
 
 }
 
+function mousePressed() {
+  if (mouseX >= width / 2 - 87.5 &&
+    mouseX <= width / 2 + 87.5 &&
+    mouseY >= height / 2 + 200 - 30 &&
+    mouseY <= height / 2 + 200 + 30)
+
+    window.open("2_webcam.html", "_self");
+}
 
 function changeCol() {
   if (mouseX >= width / 2 - 87.5 &&
@@ -92,6 +94,7 @@ function changeCol() {
     colRect = 0;
   }
 }
+
 
 
 function windowResized() {

@@ -159,7 +159,7 @@ p.setup = function() {
     p.textAlign(p.CENTER);
     p.textSize(20);
     p.fill('#fff250');
-    p.text('Welcome! \n You are in a noisy, crowded station and you need to get to the British Museum in London as soon as possible. The timetable is really full of information, try to cover the webcam to understand better which train it\'s the correct one.', correctCanvasWidth / 2, correctCanvasHeight / 2 + 50, 510, 300);
+    p.text('Welcome! \n You are in a noisy, crowded station and you need to get to the British Museum in London as soon as possible. The timetable is really full of informations, try to cover the webcam to understand better which train is useful to reach the destination', correctCanvasWidth / 2, correctCanvasHeight / 2 + 50, 510, 300);
     p.pop();
 
 
