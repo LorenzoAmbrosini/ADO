@@ -1,5 +1,5 @@
 # Ado
-img Logo
+![Header](imgr/logo.png)
 # Team members
 Lorenzo Ambrosini, Davide Macchi, Matilde Mammana, Giorgia Piacentini
 < link alle nostre e mail
