@@ -52,7 +52,12 @@ vari problemi
 
 * [Communication Noise](https://en.wikipedia.org/wiki/Communication_noise) - What is **Communication noise**
 * [Information Theory](https://en.wikipedia.org/wiki/Information_theory) - Something about **Information Theory and noises** about transmission
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Communication Noise](https://en.wikipedia.org/wiki/Communication_noise) - What is **Communication noise**
+* [Information Theory](https://en.wikipedia.org/wiki/Information_theory) - Something about **Information Theory and noises** about transmission
+* [Communication Noise](https://en.wikipedia.org/wiki/Communication_noise) - What is **Communication noise**
+* [Information Theory](https://en.wikipedia.org/wiki/Information_theory) - Something about **Information Theory and noises** about transmission
+* [Communication Noise](https://en.wikipedia.org/wiki/Communication_noise) - What is **Communication noise**
+* [Information Theory](https://en.wikipedia.org/wiki/Information_theory) - Something about **Information Theory and noises** about transmission
 
 ### Credits
 
