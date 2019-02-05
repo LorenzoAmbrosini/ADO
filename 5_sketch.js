@@ -3,6 +3,8 @@ var man;
 var popup;
 var home;
 var title;
+var maxTitleSize = 15;
+var phase = -10 ;
 function preload(){
   // put preload code here
     imgBackground = loadImage("./assets/5/sotto.png");
@@ -39,15 +41,18 @@ function draw() {
    push(); // home
    imageMode(CENTER);
    let scaleH = Math.max(width / home.width, height / home.height);
-   image(home, 50, 50, home.width / 30 * scaleH, home.height / 30 * scaleH);
+   image(home, 100, 100, home.width / 30 * scaleH, home.height / 30 * scaleH);
    pop(); // home
 
-   push(); // title
+   push();
+   var x = windowWidth/2;
+   var y = height/2-300 ;
+   phase = frameCount/5 ;
+   var sizeOffset = (sin(phase)+30);
+   var titleSize = sizeOffset * maxTitleSize;
    imageMode(CENTER);
-   translate(width / 2, height / 2);
-   let scaleF = Math.max(width / title.width * 3, height / title.height* 3);
-   image(title, 0, -350, title.width / 30 * scaleF, title.height / 30 * scaleF);
-   pop(); // title
+   image(title, x, y, titleSize*1.2, titleSize/5);
+   pop();
 
    textAlign(CENTER);
    textSize(30);

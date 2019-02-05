@@ -41,6 +41,7 @@ function draw() {
   text('Start', width / 2, height / 2 + 210);
   pop(); // testo button
 
+  //claim
   textAlign(CENTER);
   translate(width / 2, height / 2);
   textStyle(BOLD);
@@ -48,6 +49,7 @@ function draw() {
   fill(255, 242, 80);
   text('Sometimes it\'s hard communicate.',-10, 70);
   text('Sometimes it\'s hard understand.',-10, 120);
+  //claim
 
 }
 
