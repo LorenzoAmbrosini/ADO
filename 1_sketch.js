@@ -1,13 +1,12 @@
 var imgBackground;
 var logo;
-var home;
 var colText = '255, 242, 80';
 var colRect = 0;
 
 function preload() {
   imgBackground = loadImage("./assets/1/sfondo.png");
   logo = loadImage("./assets/1/logo.png");
-  home = loadImage("./assets/1/home.png");
+
 }
 
 function setup() {
@@ -25,11 +24,7 @@ function draw() {
   image(logo, 0, -50, logo.width / 4 * scale, logo.height / 4 * scale);
   pop(); // logo
 
-  push(); // home
-  imageMode(CENTER);
-  let scaleH = Math.max(width / home.width, height / home.height);
-  image(home, 50, 50, home.width / 30 * scaleH, home.height / 30 * scaleH);
-  pop(); // home
+
   changeCol(); // cambia colore button
   push(); // button
   stroke(255, 242, 80);
