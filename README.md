@@ -30,7 +30,7 @@ On the other hand, it is also difficult to understand an information if we are i
 Per rendere maggiormente chiaro questo concetto abbiamo scelto degli scenari specifici, dove la comunicare e capire informazioni risulta spesso difficile.
 
 ### Our Aim
-bla bla bla bla per far capire il bla bla bla
+Have you ever think about how noise can make your communications
 
 ### First scenary:
 The first scenary we have chosen is a **train station**, a very chaotic place where daily i's easy to take the wrong train, destination and time, because of the excess of information on the boards, and the chaos due to the crowd.
