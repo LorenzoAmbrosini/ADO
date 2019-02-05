@@ -57,8 +57,8 @@ function draw() {
   textSize(35);
   fill(255, 242, 80);
 
-  text('Sometimes it\'s hard to communicate.', -10, 70);
-  text('Sometimes it\'s hard to understand.', -10, 120);
+  text('Sometimes it\'s hard to communicate', -10, 70);
+  text('Sometimes it\'s hard to understand', -10, 120);
   //claim
 }
 

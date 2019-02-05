@@ -128,7 +128,7 @@ function draw() {
     textAlign(CENTER);
     textSize(20);
     fill('#fff250');
-    text('You were lucky, the taxi you called arrived in perfect time.Now you have to tell the taxi driver your destination, which is the British Museum.\n Speak out loud because of traffic noise and the voices of the citizens are very strong, and pay attention to the time!', windowWidth / 2, windowHeight / 2, 500, 200);
+    text('You were lucky, the taxi you called arrived in perfect time. Now you have to tell the taxi driver your destination, which is the British Museum.\n Speak out loud because of traffic noise and the voices of the citizens are very strong, and pay attention to the time!', windowWidth / 2, windowHeight / 2, 500, 200);
     pop();
 
   }
