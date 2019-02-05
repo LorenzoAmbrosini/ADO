@@ -51,7 +51,7 @@ vari problemi
 ### Inspirations/References
 
 * [Communication Noise](https://en.wikipedia.org/wiki/Communication_noise) - What is **Communication noise**
-* [Maven](https://maven.apache.org/) - Dependency Management
+* [Information Theory](https://en.wikipedia.org/wiki/Information_theory) - Something about **Information Theory and noises** about transmission
 * [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
 ### Credits
