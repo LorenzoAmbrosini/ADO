@@ -4,12 +4,15 @@ var imgBackground;
 var frameTime = 0;
 var clockTime = 0;
 var clockSwitch = 1;
-var counter = 600;
+var counter = 900;
 var b;
 var x, y;
 var variabile = 1;
 
 var interruttore;
+
+var correctCanvasWidth;
+var correctCanvasHeight;
 
 
 var myRec = new p5.SpeechRec(); // new P5.SpeechRec object
@@ -31,11 +34,16 @@ mySpeech.setLang('en-UK');
 
  p.setup = function() {
 
+
   // graphics stuff:
   p.frameRate(30)
   var canvas = p.createCanvas(1152, 648);
   canvas.parent('sketch4');
-  p.background(0);
+
+
+  correctCanvasWidth = p.canvas.width / 2;
+  correctCanvasHeight = p.canvas.height / 2;
+
 
 
   p.fill(0, 0, 0, 255);
@@ -55,11 +63,10 @@ mySpeech.setLang('en-UK');
   song.setVolume(0.3);
 
 
-  p.fill(166, 237, 247);
   p.noStroke();
 
   p.ellipseMode(p.CENTER);
-  p.fill("blue");
+  p.fill(50);
   p.ellipse(p.windowWidth - 130, 100, 70, 70)
   p.rectMode(p.CENTER);
 
@@ -69,14 +76,18 @@ mySpeech.setLang('en-UK');
 }
 
   p.draw = function() {
-  p.imageMode(p.CENTER);
-  p.image(imgBackground, p.windowWidth/2, p.windowHeight/2, 0.8 * imgBackground.width, 0.8 * imgBackground.height);
 
   p.push();
-  p.fill("blue");
+  p.imageMode(p.CORNER);
+  p.image(imgBackground, 0, -10, imgBackground.width * 0.6, imgBackground.height * 0.6);
+  p.pop();
+
+
+  p.push();
+  p.fill(50);
   p.noStroke();
   p.ellipseMode(p.CENTER);
-  p.ellipse(p.windowWidth - 130, 100, 70, 70);
+  p.ellipse(correctCanvasWidth - 200, 150, 70, 70);
   p.pop();
 
   p.push();
@@ -85,7 +96,7 @@ mySpeech.setLang('en-UK');
   p.textSize(30);
   p.fill(255)
   var correctCounter = p.round(counter /30);
-  p.text(correctCounter, p.windowWidth - 130, 110, x, y)
+  p.text(correctCounter, correctCanvasWidth - 200, 160, x, y)
 
   p.pop()
 
@@ -99,8 +110,8 @@ mySpeech.setLang('en-UK');
   if(interruttore === 1){
     p.push();
     p.rectMode(p.CORNER)
-    p.fill(0, 0, 0, 200);
-    p.rect(0, 0, p.windowWidth, p.windowHeight);
+    p.fill(0, 0, 0, 230);
+    p.rect(0, 0, correctCanvasWidth, correctCanvasHeight);
     p.pop();
 
     p.changeCol()
@@ -110,7 +121,7 @@ mySpeech.setLang('en-UK');
     p.strokeWeight(2);
     p.rectMode(p.CENTER);
     p.fill(colRect);
-    p.rect(p.windowWidth / 2, p.windowHeight / 2 + 160, 100, 60, 30);
+    p.rect(correctCanvasWidth/2, correctCanvasHeight / 2 + 160, 100, 60, 30);
     p.pop();
 
     p.push(); // testo button
@@ -120,7 +131,7 @@ mySpeech.setLang('en-UK');
     p.textSize(30);
     p.textStyle(p.BOLD);
     p.fill(colText);
-    p.text('Ok', p.windowWidth / 2, p.windowHeight / 2 + 170);
+    p.text('Ok', correctCanvasWidth/2, correctCanvasHeight/2 + 170);
     p.pop(); // testo button
 
     p.push();
@@ -129,7 +140,8 @@ mySpeech.setLang('en-UK');
     p.textAlign(p.CENTER);
     p.textSize(20);
     p.fill('#fff250');
-    p.text('You were lucky, the taxi you called arrived in perfect time. Now you have to tell the taxi driver your destination, which is the British Museum.\n Speak out loud because of traffic noise and the voices of the citizens are very strong, and pay attention to the time!', p.windowWidth / 2, p.windowHeight / 2, 500, 200);
+    p.text('You were lucky, the taxi you called arrived in perfect time. Now you have to tell the taxi driver your destination, which is the British Museum.\n Speak out loud because of traffic noise \nand the voices of the citizens are very strong. \nKeep the volume up and pay attention to the time!',
+    correctCanvasWidth / 2, correctCanvasHeight / 2 + 20, 550, 200);
     p.pop();
 
   }
@@ -155,18 +167,6 @@ mySpeech.setLang('en-UK');
 
 
 
-  p.backgroundImage = function(imgBackground) {
-  p.push();
-  p.translate(p.windowWidth / 2, p.windowHeight / 2);
-  p.imageMode(p.CENTER);
-  let scale = Math.max(p.windowWidth / imgBackground.width, p.windowHeight / imgBackground.height);
-  p.image(imgBackground, 0, 0, imgBackground.width * scale, imgBackground.height * scale);
-  p.pop();
-
-}
-
-
-
   p.showResult = function() {
   if (myRec.onResult) {
     //console.log("STO ASCOLTANDO");
@@ -174,11 +174,11 @@ mySpeech.setLang('en-UK');
     p.rectMode(p.CORNER)
     p.textAlign(p.CENTER);
     p.fill("white");
-    p.rect(0.43 * p.windowWidth, 75, 430, 100);
+    p.rect(correctCanvasWidth/2 - 70, 105, 340, 100);
     p.fill("black");
     p.textAlign(p.LEFT);
     p.textSize(25);
-    p.text(myRec.resultString, 0.43 * p.windowWidth, 90, 450, 300);
+    p.text(myRec.resultString, correctCanvasWidth/2 - 60, 110, 330, 100);
     p.fill(166, 237, 247);
     p.pop();
   }
@@ -189,10 +189,10 @@ mySpeech.setLang('en-UK');
 
 
     p.mousePressed = function(){
-    if (p.mouseX >= p.width / 2 - 87.5 &&
-      p.mouseX <= p.width / 2 - 87.5 + 175 &&
-      p.mouseY >= p.height / 2 + 130 &&
-      p.mouseY <= p.height / 2 + 130 + 60) {
+    if (p.mouseX >= correctCanvasWidth/2 - 50 &&
+      p.mouseX <= correctCanvasWidth/2 + 50 &&
+      p.mouseY >= correctCanvasHeight/2 + 130  &&
+      p.mouseY <= correctCanvasHeight/2 + 190) {
         if (p.mouseButton == p.LEFT ) {
            interruttore = 0;
            console.log("click");
@@ -207,10 +207,10 @@ mySpeech.setLang('en-UK');
 
 
   p.changeCol = function() {
-  if (p.mouseX >= p.width / 2 - 87.5 &&
-    p.mouseX <= p.width / 2 - 87.5 + 175 &&
-    p.mouseY >= p.height / 2 + 130 &&
-    p.mouseY <= p.height / 2 + 130 + 60) {
+  if (p.mouseX >= correctCanvasWidth/2 - 50 &&
+    p.mouseX <= correctCanvasWidth/2 + 50 &&
+    p.mouseY >= correctCanvasHeight/2 + 130  &&
+    p.mouseY <= correctCanvasHeight/2 + 190) {
       p.push();
     colText = 0;
     colRect = '#fff250';
