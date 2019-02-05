@@ -8,6 +8,9 @@ var sketch5 = function(p) {
   var maxTitleSize = 15;
   var phase = -10;
 
+  var correctCanvasWidth;
+  var correctCanvasHeight;
+
   p.preload = function() {
 
     imgBackground = p.loadImage("./assets/5/sotto.png");
@@ -23,35 +26,35 @@ var sketch5 = function(p) {
     p.textFont('Montserrat');
     p.background(25);
 
+    correctCanvasWidth = p.canvas.width / 2;
+    correctCanvasHeight = p.canvas.height / 2;
+
   };
 
   p.draw = function() {
 
-    p.backgroundImage(imgBackground);
+    p.changeCol()
+
+    p.push();
+    p.imageMode(p.CORNER);
+    p.image(imgBackground, 0, 0);
+    p.pop();
 
     p.push(); // man
-    p.translate(p.windowWidth / 2, p.windowHeight / 2);
     p.imageMode(p.CENTER);
-    let scale = Math.max(p.windowWidth / man.width, p.windowHeight / man.height);
-    p.image(man, -480, 125, man.width / 4 * scale, man.height / 4 * scale);
+    p.image(man, 250, correctCanvasHeight - 200, man.width / 3, man.height / 3);
     p.pop(); //man
 
-    p.push(); // popup
-    p.translate(p.windowWidth / 2, p.windowHeight / 2);
-    p.imageMode(p.CENTER);
-    let scaleG = Math.max(p.windowWidth / popup.width + 50, p.windowHeight / popup.height + 50);
-    p.image(popup, 15, -40, popup.width / 4 * scale, popup.height / 5.5 * scale);
-    p.pop(); //popup
+
 
     p.push(); // home
     p.imageMode(p.CENTER);
-    let scaleH = Math.max(p.windowWidth / home.width, p.windowHeight / home.height);
-    p.image(home, 100, 100, home.width / 30 * scaleH, home.height / 30 * scaleH);
+    p.image(home, 50, 50, home.width / 3, home.height / 3);
     p.pop(); // home
 
     p.push(); //title
-    var x = p.windowWidth / 2;
-    var y = p.windowHeight / 2 - 300;
+    var x = correctCanvasWidth / 2 + 230;
+    var y = correctCanvasHeight / 2 - 250;
     phase = p.frameCount / 5;
     var sizeOffset = (p.sin(phase) + 30);
     var titleSize = sizeOffset * maxTitleSize;
@@ -60,51 +63,71 @@ var sketch5 = function(p) {
     p.pop(); //title
 
 
-    p.textAlign(p.CENTER);
-    p.textSize(30);
-    p.textFont()
 
 
-    p.push(); //text popup
-    p.textAlign(p.CENTER);
-    p.textSize(18);
-    p.translate(p.windowWidth / 2, p.windowHeight / 2);
-    p.text('In the information theory the word NOISE indicates   ', 20, -200);
-    p.text('everything that intervenes between the transmitte, ', 20, -175);
-    p.text('and the receiver,  compromising the effectiveness ', 20, -150);
-    p.text('of the communication (it is essentially ', 20, -125);
-    p.text('a technical interference). In other cases ', 20, -100);
-    p.text('the concept assumes a metaphorical value and refers', 20, -75);
-    p.text('to all types of disturbances that can intervene ', 20, -50);
-    p.text('in the communicative process, reducing its effectiveness ', 20, -25);
-    p.text('or even compromising the result.', 20, 0);
-    p.text('The concept of INFORMATION NOISE in psychology', 20, 25);
-    p.text('and semiotics,"is a disorder caused by the excess of ', 20, 50);
-    p.text('information, such that even the potentially useful   ', 20, 75);
-    p.text(' element is not recognized, not even identified, ', 20, 100);
-    p.text('or identified with difficulty". ', 20, 125);
-    p.pop(); // text pop
 
-  };
 
-    p.backgroundImage = function(imgBackground) {
-
-    p.push();
-    p.translate(p.windowWidth / 2, p.windowHeight / 2);
-    p.imageMode(p.CENTER);
-    let scale = Math.max(p.windowWidth / imgBackground.width, p.windowHeight / imgBackground.height);
-    p.image(imgBackground, 0, 0, imgBackground.width * scale, imgBackground.height * scale);
+    p.push(); // popup
+    p.rectMode(p.CORNER);
+    p.fill("#fff250");
+    p.rect(correctCanvasWidth / 2 - 50, correctCanvasHeight / 2 - 170, 560, 390, 5);
     p.pop();
 
+    p.push(); //text popup
+    p.textAlign(p.LEFT);
+    p.textSize(19);
+    p.text('In the information theory the word NOISE indicates everything that intervenes between the transmitter, and the receiver, compromising the effectiveness \nof the communication (it is essentially a technical interference). \nIn other cases the concept assumes a metaphorical value and refers to all types of disturbances that can intervene in the communicative process, reducing \nits effectiveness or even compromising the result. \nThe concept of INFORMATION NOISE in psychology and semiotics,"is a disorder caused by the excess \nof information, such that even the potentially useful element is not recognized, not even identified, \nor identified with difficulty". ',
+    correctCanvasWidth / 2 - 20, correctCanvasHeight / 2 - 140, 520, 450, 5);
+    p.pop(); // text pop
+
+    p.push(); // button
+    p.stroke(255, 242, 80);
+    p.strokeWeight(2);
+    p.rectMode(p.CENTER);
+    p.fill(colRect);
+    p.rect(correctCanvasWidth/2 + 230, correctCanvasHeight / 2 + 270, 200, 60, 30);
+    p.pop();
+
+    p.push(); // testo button
+
+    p.textFont('Montserrat');
+    p.textAlign(p.CENTER);
+    p.textSize(30);
+    p.textStyle(p.BOLD);
+    p.fill(colText);
+    p.text('Read more', correctCanvasWidth/2 + 230, correctCanvasHeight / 2 + 280);
+    p.pop(); // testo button
+
   };
 
+
+
     p.mousePressed = function() {
-    if (p.mouseX >= 0 &&
-      p.mouseX <= 176 &&
-      p.mouseY >= 0 &&
-      p.mouseY <= 172)
-      window.open("index.html", "_self");
+    if (p.mouseX >= correctCanvasWidth/2 +130 &&
+      p.mouseX <= correctCanvasWidth/2 + 330 &&
+      p.mouseY >= correctCanvasHeight/2 + 240 &&
+      p.mouseY <= correctCanvasHeight/2 + 260)
+      window.open("https://en.wikipedia.org/wiki/Communication_noise", "_self");
   }
+
+  p.changeCol = function() {
+  if (p.mouseX >= correctCanvasWidth/2 +130 &&
+    p.mouseX <= correctCanvasWidth/2 + 330 &&
+    p.mouseY >= correctCanvasHeight/2 + 240 &&
+    p.mouseY <= correctCanvasHeight/2 + 300) {
+      p.push();
+    colText = 0;
+    colRect = '#fff250';
+    p.pop();
+  } else {
+    p.push();
+    colText = '#fff250';
+    colRect = 0;
+    p.pop();
+  }
+}
+
+
 
 
 }
