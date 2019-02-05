@@ -17,6 +17,7 @@ In the information theory the word **NOISE** indicates everything that intervene
 In other cases, the concept assumes a metaphorical value and refers to all types of disturbances that can intervene in the communicative process, reducing its effectiveness or even compromising the result.
 
 On one hand, it can be difficult to find the information we need if there are **too many informations** so we can't reach the one we need. 
+
 On the other hand, it is also difficult to understand an information if we are in a **noisy space**, in fact the information we want to transmit is overwhelmed by other information so it can be very difficult for the receiver to understand what we say.
 
 ![alt text](https://github.com/drawwithcode/2018-group-work-group-08/blob/master/imgr/schema.jpg)
