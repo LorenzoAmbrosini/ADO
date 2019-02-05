@@ -76,6 +76,41 @@ We found **interesting solutions** to our problems that we are going to show bel
 First of all, one of the most interesting solution is the one which makes the webcam understand if it's dark or bright on the room.
 
 
+
+
+    this.display = function() {
+
+    var c = capture.get(p.noise(capture.width / 2), p.noise(capture.height / 2));
+
+    var colorRandomizer = p.random(0.3, 1);
+    var bright = p.lightness(c);
+    var correctBright = colorRandomizer *  p.map(bright, 0, 25, 0, 255);
+    
+     if (_name == "London") {
+
+      p.fill(col);
+      if (bright * 5 < 50) {
+        p.fill(colLondon);
+      }
+
+      p.text(oraTreni + _time, this.x, this.y);
+      p.text(_name, this.x + 150, this.y);
+      p.text(_code, this.x + 560, this.y);
+      p.text(_platform, this.x + 700, this.y);
+      p.text(_status, this.x + 800, this.y);
+
+    } else {
+      p.fill(col);
+      p.text(oraTreni + _time, this.x, this.y);
+      p.text(_name, this.x + 150, this.y);
+      p.text(_code, this.x + 560, this.y);
+      p.text(_platform, this.x + 700, this.y);
+      p.text(_status, this.x + 800, this.y);
+    }
+    }
+
+
+
 ## Inspirations/References
 
 * [Communication Noise](https://en.wikipedia.org/wiki/Communication_noise) - What is **Communication noise**
