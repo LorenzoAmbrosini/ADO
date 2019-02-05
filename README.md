@@ -50,7 +50,7 @@ Abbiamo scelto di utilizzare tre diversi tipi di interazioni, coerenti con il no
 vari problemi
 ### Inspirations/References
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+* [Communication Noise](https://en.wikipedia.org/wiki/Communication_noise) - What is **Communication noise**
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
