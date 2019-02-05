@@ -13,6 +13,7 @@ Have you ever tried to search the web for any kind of news and to notice how man
 In fact, today, because of the multiple channels of information present, it's often difficult to capture the right information. 
 In the information theory the word **NOISE** indicates everything that intervenes between the transmitter and the receiver, compromising the effectiveness of the communication (it is essentially a technical interference).
 In other cases, the concept assumes a metaphorical value and refers to all types of disturbances that can intervene in the communicative process, reducing its effectiveness or even compromising the result.
+
 ![alt text](https://github.com/drawwithcode/2018-group-work-group-08/blob/master/imgr/schema.jpg)
 
 # Project idea
@@ -27,6 +28,7 @@ Il primo scenario che abbiamo scelto è una stazione di treni, luogo molto caoti
 Il secondo, e ultimo scenario, rappresenta la città trafficata, nel quale l'utente dovrà riuscire a prendere un taxi per raggiungere la sua destinazione. Anche la città, per via dei rumori del traffico e della grande quantità di cittadini, rappresenta l'ambiente perfetto per dimostrare quanto sia difficile comunicare e ricevere informazioni.
 
 ###### Interazioni:
+Per le interazioni
 
 
 
