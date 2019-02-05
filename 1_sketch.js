@@ -32,7 +32,6 @@ function draw() {
   pop();
   //logo
 
-
   changeCol(); // cambia colore button
 
   push(); // button
