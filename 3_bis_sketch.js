@@ -76,7 +76,7 @@ var sketch3 = function(p) {
     p.fill(0);
     p.textAlign(p.CENTER);
     p.textSize(20);
-    p.text("Unfortunately all the trains to London have been cancelled, but you don't have time to waste! \n \nFortunately you can still call a taxi, \ntype the number 0871 \non the telephone keypad and... \n  \n... Good luck!",
+    p.text("All the trains to London have been cancelled, but you can't waste time! \n \nFortunately you can call a taxi, \ntype the number 0871 \non your keyboard and... \n  \n... Good luck!",
     correctCanvasWidth / 2 + 70, correctCanvasHeight / 2 - 110, 430, 300 );
     p.pop(); //popup
 
