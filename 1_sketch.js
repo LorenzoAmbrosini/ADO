@@ -1,5 +1,7 @@
 var imgBackground;
 var logo;
+var maxLogoSize = 20;
+var phase = -10 ;
 var colText = '255, 242, 80';
 var colRect = 0;
 
@@ -17,12 +19,18 @@ function setup() {
 
 function draw() {
   backgroundImage(imgBackground);
-  push(); // logo
-  translate(width / 2, height / 2);
+
+//logo
+  push();
+  var x = windowWidth/2;
+  var y = windowHeight/2-180 ;
+  phase = frameCount/5 ;
+  var sizeOffset = (sin(phase)+30);
+  var logoSize = sizeOffset * maxLogoSize;
   imageMode(CENTER);
-  let scale = Math.max(width / logo.width, height / logo.height);
-  image(logo, 0, -100, logo.width / 4 * scale, logo.height / 4 * scale);
-  pop(); // logo
+  image(logo, x, y, logoSize*1.1, logoSize/2);
+  pop();
+  //logo
 
 
   changeCol(); // cambia colore button
@@ -41,14 +49,16 @@ function draw() {
   text('Start', width / 2, height / 2 + 210);
   pop(); // testo button
 
+  //claim
   textAlign(CENTER);
   translate(width / 2, height / 2);
   textStyle(BOLD);
   textSize(35);
   fill(255, 242, 80);
-  text('Sometimes it\'s hard to communicate',-10, 70);
-  text('Sometimes it\'s hard to understand',-10, 120);
 
+  text('Sometimes it\'s hard to communicate.',-10, 70);
+  text('Sometimes it\'s hard to understand.',-10, 120);
+  //claim
 }
 
 function mousePressed() {
