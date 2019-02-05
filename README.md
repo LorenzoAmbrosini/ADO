@@ -8,7 +8,6 @@
 
 **Giorgia Piacentini** : giorgia.piacentini@mail.polimi.it
 
-![alt text](https://github.com/drawwithcode/2018-group-work-group-08/blob/master/imgr/sonicear.jpg)
 
 # Concept
 Have you ever tried to search the web for any kind of news and to notice how many different articles are found to talk about the same information?
@@ -19,6 +18,7 @@ In other cases, the concept assumes a metaphorical value and refers to all types
 On one hand, it can be difficult to find the information we need if there are **too many informations** so we can't reach the one we need. 
 
 On the other hand, it is also difficult to understand an information if we are in a **noisy space**, in fact the information we want to transmit is overwhelmed by other information so it can be very difficult for the receiver to understand what we say.
+
 
 ![alt text](https://github.com/drawwithcode/2018-group-work-group-08/blob/master/imgr/schema.jpg)
 
@@ -46,11 +46,11 @@ The first scenary we have chosen is a **train station**, a very chaotic place wh
 The second, and last scenary, represents the **busy city**, where the user will have to be able to take a taxi to reach his destination. Even the city, due to traffic noise and large numbers of citizens, is the perfect environment to demonstrate how difficult it is to communicate and receive information.
 
 ## Interactions:
-We have chosen three different kind of interaction, coherent with our theme.
+We have chosen three different kind of interactions, coherent with our theme.
 
-- In the first scenary there is an interaction with the **webcam** in which the user has to cover the camera of his PC, as if in reality he metaphorically to focus (narrowing the objective) the right information.
-- The interaction that serves to access the second scenary, consists in **typing** a number **by the keyboard**, to simulate the real call of a taxi.
-- The last interaction, finally, takes place through the **microphone**, that is: the user will have to talk to the taxi driver and bring him back to the destination. In the background, however, traffic noises and voices of citizens will be present, which will make this process more difficult and, at the same time, similar to reality.
+- In the first scenary there is an interaction with the **webcam** in which the user has to cover the camera of his PC, as if in reality he metaphorically has to focus (narrowing the objective) on the right information.
+- The interaction that allows to access the second scenary, consists in **typing** a number **by the keyboard**, to simulate the real calling of a taxi.
+- The last interaction, at the end, takes place through the **microphone**: the user will have to talk to the taxi driver and carry him to the destination. In the background, however, traffic noises and voices of citizens will be present, which will make this process more difficult and, at the same time, similar to reality.
 
 
 
@@ -83,13 +83,20 @@ We used some ***p5 libreries***:
 
 
 
-***Graphics*** and drawings:
-* [Freepik](https://www.freepik.com/) - Some illustrations we modified
+***Graphics*** and drawings, we used some websites to inspire us for our illustrations:
+* [Freepik](https://www.freepik.com/) 
+* [TheNounProject](https://thenounproject.com/it/) 
+* [Flaticon](https://www.flaticon.com/) 
+
 
 
 
 ***Sounds***: 
 * [People speaking](http://www.pacdv.com/sounds/people_sounds.html) - For the **sound** of the interactions
+
+
+
+
 
 # Visual
 
@@ -99,7 +106,7 @@ For the graphics we used the following elements:
 
 - Strong colors like **yellow** (typically used for news as it calls attention) and **black**, neutral color that increases the contrast.
 - We kept the same contrast even between the fonts using a simple and linear for the texts, the **Montserrat**, and a more exuberant for the logo and some titles, the **Chrome Black**.
-- In the scenaries, finally, we used **illustrations** created by us.
+- In the scenaries, we used **illustrations**.
 
 
 # Course reference and academic year
