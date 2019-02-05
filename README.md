@@ -76,6 +76,10 @@ We used some ***p5 libreries***:
 * [p5.sound.min.js](https://p5js.org/reference/#/libraries/p5.sound) - To **load and play** sound
 * [p5.speech.js](http://ability.nyu.edu/p5.js-speech/) - To make the pc able to **speak and understand** what you say
 
+# Visual
+
+![alt text](https://github.com/drawwithcode/2018-group-work-group-08/blob/master/imgr/moodboard.jpg)
+
 
 # Course reference and academic year
 Creative Coding 2018/2019 (https://drawwithcode.github.io/)
