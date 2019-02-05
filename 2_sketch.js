@@ -8,8 +8,11 @@ var y;
 var ora;
 var minuti;
 
+var correctCanvasWidth;
+var correctCanvasHeight;
 
-var counter = 600;
+
+var counter = 450;
 var interruttore;
 
 var colText = '255, 242, 80';
@@ -26,7 +29,12 @@ p.setup = function() {
 
 
   p.frameRate(30);
-  var canvas =  p.createCanvas(1280, 720);
+  var canvas =  p.createCanvas(1152, 648);
+
+  correctCanvasWidth = p.canvas.width / 2;
+  correctCanvasHeight = p.canvas.height / 2;
+
+  //var canvas =  p.createCanvas(p.windowWidth, p.windowHeight);
   canvas.parent('sketch2');
   capture = p.createCapture(p.VIDEO);
   capture.size(640, 480);
@@ -36,8 +44,8 @@ p.setup = function() {
   for (var i = 0; i < 14; i++) {
 
     // properties
-    x = p.windowWidth / 9;
-    y = i * 30 + p.windowHeight / 3;
+    x = correctCanvasWidth / 2 - 480;
+    y = i * 30 + correctCanvasHeight / 2 - 130;
     var name = data.people[i].name;
     var time = data.people[i].time;
     var code = data.people[i].code;
@@ -60,7 +68,6 @@ p.setup = function() {
 
  p.draw = function() {
 
-//console.log(interruttore)
 
 
 
@@ -72,24 +79,24 @@ p.setup = function() {
 
   p.push();
   p.fill(0);
-  p.rect(x - 20, p.windowHeight / 3 - 40, 1000, 450, 5);
-  p.rect(x + 850, 55, 130, 60, 5);
+  p.rect(x - 20, correctCanvasHeight / 2 - 170, 1000, 450, 5);
+  p.rect(x + 850, 43, 130, 60, 5);
 
 
   p.push()
   p.fill(255, 255, 0);
   p.drawingContext.font = 'italic bold 40px Helvetica';
-  p.text("Departures", x, 100);
+  p.text("Departures", x, 90);
   p.pop();
 
   p.push()
   p.fill(255);
   p.drawingContext.font = 'bold 18px Helvetica';
-  p.text("TIME", x, 180);
-  p.text("DESTINATION", x + 150, 180);
-  p.text("NUMBER", x + 560, 180);
-  p.text("PLAT.", x + 700, 180);
-  p.text("STATUS", x + 800, 180);
+  p.text("TIME", x, 140);
+  p.text("DESTINATION", x + 150, 140);
+  p.text("NUMBER", x + 560, 140);
+  p.text("PLAT.", x + 700, 140);
+  p.text("STATUS", x + 800, 140);
 
   p.pop();
 
@@ -101,13 +108,13 @@ p.setup = function() {
 
   if (ora < 10){
     if (minuti < 10) {
-      p.text("0" + ora + ":0" + minuti, x + 860, 100);
+      p.text("0" + ora + ":0" + minuti, x + 860, 90);
     } else {
-      p.text("0" + ora + ":" + minuti, x + 860, 100);
+      p.text("0" + ora + ":" + minuti, x + 860, 90);
       }
   }
   else{
-    p.text(ora + ":" + minuti, x + 860, 100);
+    p.text(ora + ":" + minuti, x + 860, 90);
   }
 
   p.pop();
@@ -120,8 +127,8 @@ p.setup = function() {
 
   if(interruttore === 1){
     p.push();
-    p.fill(0, 0, 0, 200);
-    p.rect(0, 0, 1280, 720);
+    p.fill(0, 0, 0, 230);
+    p.rect(0, 0, correctCanvasWidth, correctCanvasHeight);
     p.pop();
 
     p.changeCol()
@@ -131,7 +138,7 @@ p.setup = function() {
     p.strokeWeight(2);
     p.rectMode(p.CENTER);
     p.fill(colRect);
-    p.rect(p.windowWidth / 2, p.windowHeight / 2 + 160, 100, 60, 30);
+    p.rect(correctCanvasWidth / 2, correctCanvasHeight / 2 + 140, 100, 60, 30);
     p.pop();
 
     p.push(); // testo button
@@ -141,7 +148,7 @@ p.setup = function() {
     p.textSize(30);
     p.textStyle(p.BOLD);
     p.fill(colText);
-    p.text('Ok', p.windowWidth / 2, p.windowHeight / 2 + 170);
+    p.text('Ok', correctCanvasWidth / 2, correctCanvasHeight / 2 + 150);
     p.pop(); // testo button
 
     p.push();
@@ -150,7 +157,7 @@ p.setup = function() {
     p.textAlign(p.CENTER);
     p.textSize(20);
     p.fill('#fff250');
-    p.text('Lorem ipsum dolor sit amet, consectetur adipisci elit sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.', p.windowWidth / 2, p.windowHeight / 2, 500, 100);
+    p.text('Welcome! \n You are in a noisy, crowded station and you need to get to the British Museum in London as soon as possible. The timetable is really full of information, try to cover the webcam to understand better which train it\'s the correct one.', correctCanvasWidth / 2, correctCanvasHeight / 2 + 50, 510, 300);
     p.pop();
 
 
@@ -217,10 +224,10 @@ p.setup = function() {
 };
 
  p.changeCol = function() {
-  if (p.mouseX >= p.windowWidth / 2 - 87.5 &&
-    p.mouseX <= p.windowWidth / 2 - 87.5 + 175 &&
-    p.mouseY >= p.windowHeight / 2 + 130 &&
-    p.mouseY <= p.windowHeight / 2 + 130 + 60) {
+  if (p.mouseX >= correctCanvasWidth / 2 - 50 &&
+    p.mouseX <= correctCanvasWidth / 2 + 50 &&
+    p.mouseY >= correctCanvasHeight / 2 + 140 - 30 &&
+    p.mouseY <= correctCanvasHeight / 2 + 140 + 30) {
     colText = 0;
     colRect = '#fff250';
   } else {
@@ -232,20 +239,20 @@ p.setup = function() {
 
 
  p.countdown = function() {
-  console.log(counter);
+  //console.log(counter);
   if (counter > 0) {
     counter--;
   }
   if (counter == 0) {
-    window.open("3_intermezzo.html", "_self")
+    window.open("3_tastiera.html", "_self")
   }
 };
 
  p.mousePressed = function(){
-  if (p.mouseX >= p.windowWidth / 2 - 87.5 &&
-    p.mouseX <= p.windowWidth / 2 - 87.5 + 175 &&
-    p.mouseY >= p.windowHeight / 2 + 130 &&
-    p.mouseY <= p.windowHeight / 2 + 130 + 60) {
+  if (p.mouseX >= correctCanvasWidth / 2 - 50 &&
+    p.mouseX <= correctCanvasWidth / 2 + 50 &&
+    p.mouseY >= correctCanvasHeight / 2 + 140 - 30 &&
+    p.mouseY <= correctCanvasHeight / 2 + 140 + 30) {
       if (p.mouseButton == p.LEFT ) {
          interruttore = 0;
          console.log("click");

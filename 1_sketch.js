@@ -55,9 +55,12 @@ function draw() {
   textStyle(BOLD);
   textSize(35);
   fill(255, 242, 80);
-  text('Sometimes it\'s hard communicate.',-10, 70);
-  text('Sometimes it\'s hard understand.',-10, 120);
+
+  text('Sometimes it\'s hard to communicate.',-10, 70);
+  text('Sometimes it\'s hard to understand.',-10, 120);
   //claim
+
+
 }
 
 function mousePressed() {
