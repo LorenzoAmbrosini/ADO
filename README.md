@@ -24,20 +24,20 @@ Per rendere maggiormente chiaro questo concetto abbiamo scelto degli scenari spe
 ### Primo Scenario
 Il primo scenario che abbiamo scelto è una stazione di treni, luogo molto caotico dove quotidianamente è facile sbagliare treno, destinazione ed orario, per via dell'eccesso di informazioni presenti sui tabelloni, e del caos dovuto alla folla.
 
-###### Secondo scenario:
+### Secondo scenario:
 Il secondo, e ultimo scenario, rappresenta la città trafficata, nel quale l'utente dovrà riuscire a prendere un taxi per raggiungere la sua destinazione. Anche la città, per via dei rumori del traffico e della grande quantità di cittadini, rappresenta l'ambiente perfetto per dimostrare quanto sia difficile comunicare e ricevere informazioni.
 
-###### Interazioni:
+### Interazioni:
 Per le interazioni
 
 
 
-###### Code challenges
-###### Design challenges
-###### Code challenges
+### Code challenges
+### Design challenges
+### Code challenges
 
 vari problemi
-###### Inspirations/References
+### Inspirations/References
 .... bo
 # Credits (third libraries used)
 le librerie, disegni, bla bla 
