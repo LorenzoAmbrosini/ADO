@@ -57,16 +57,27 @@ var sketch3 = function(p) {
 
     s = 0; //7
 
+    p.background(255, 200, 0 )
+
   };
 
   p.draw = function() {
 
-    p.backgroundImage(imgBackground);
+    p.push();
+    p.imageMode(p.CORNER);
+    p.image(imgBackground, 0, 0, imgBackground.width * 0.6, imgBackground.height * 0.6);
+    p.pop();
 
     p.push(); // popup
-    p.imageMode(p.CENTER);
-    let scaleG = Math.max(correctCanvasWidth / imgPop.width + 50, correctCanvasHeight / imgPop.height + 50);
-    p.image(imgPop, correctCanvasWidth / 2 + 70, correctCanvasHeight / 2 - 180, imgPop.width / 5, imgPop.height / 7);
+    p.rectMode(p.CORNER);
+    p.fill("#fff250");
+    p.rect(correctCanvasWidth / 2 + 50, correctCanvasHeight / 2 - 150, 455, 300, 5);
+
+    p.fill(0);
+    p.textAlign(p.CENTER);
+    p.textSize(20);
+    p.text("Unfortunately all the trains to London have been cancelled, but you don't have time to waste! \n \nFortunately you can still call a taxi, \ntype the number 0871 \non the telephone keypad and... \n  \n... Good luck!",
+    correctCanvasWidth / 2 + 70, correctCanvasHeight / 2 - 110, 430, 300 );
     p.pop(); //popup
 
 
@@ -78,20 +89,19 @@ var sketch3 = function(p) {
 
     if (p.keyIsPressed == true) {
       p.push(); // tasti
-      p.fill(255);
+      p.fill('255');
       p.stroke(0);
       p.strokeWeight(2);
-      p.ellipse(correctCanvasWidth / 2 - 270, correctCanvasHeight / 2 + 245, 45); //0
-      
-      p.ellipse(correctCanvasWidth / 2 - 330, correctCanvasHeight / 2 + 35, 45); //1
-      p.ellipse(correctCanvasWidth / 2 - 270, correctCanvasHeight / 2 + 35, 45); //2
-      p.ellipse(correctCanvasWidth / 2 - 210, correctCanvasHeight / 2 + 35, 45); //3
-      p.ellipse(correctCanvasWidth / 2 - 330, correctCanvasHeight / 2 + 105, 45); //4
-      p.ellipse(correctCanvasWidth / 2 - 270, correctCanvasHeight / 2 + 105, 45); //5
-      p.ellipse(correctCanvasWidth / 2 - 210, correctCanvasHeight / 2 + 105, 45); //6
-      p.ellipse(correctCanvasWidth / 2 - 330, correctCanvasHeight / 2 + 175, 45); //7
-      p.ellipse(correctCanvasWidth / 2 - 270, correctCanvasHeight / 2 + 175, 45); //8
-      p.ellipse(correctCanvasWidth / 2 - 210, correctCanvasHeight / 2 + 175, 45); //9
+      p.ellipse(correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 + 140, 45); //0
+      p.ellipse(correctCanvasWidth / 2 - 245, correctCanvasHeight / 2 - 80, 45); //1
+      p.ellipse(correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 - 80, 45); //2
+      p.ellipse(correctCanvasWidth / 2 - 125, correctCanvasHeight / 2 - 80, 45); //3
+      p.ellipse(correctCanvasWidth / 2 - 245, correctCanvasHeight / 2 - 10, 45); //4
+      p.ellipse(correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 - 10, 45); //5
+      p.ellipse(correctCanvasWidth / 2 - 125, correctCanvasHeight / 2 - 10, 45); //6
+      p.ellipse(correctCanvasWidth / 2 - 245, correctCanvasHeight / 2 + 65, 45); //7
+      p.ellipse(correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 + 65, 45); //8
+      p.ellipse(correctCanvasWidth / 2 - 125, correctCanvasHeight / 2 + 65, 45); //9
       p.pop(); //tasti
     }
 
@@ -101,16 +111,17 @@ var sketch3 = function(p) {
       p.fill(255);
       p.stroke(0);
       p.strokeWeight(2);
-      p.ellipse(correctCanvasWidth / 2 - 270, correctCanvasHeight / 2 + 245, 45); //0
-      p.ellipse(correctCanvasWidth / 2 - 330, correctCanvasHeight / 2 + 35, 45); //1
-      p.ellipse(correctCanvasWidth / 2 - 270, correctCanvasHeight / 2 + 35, 45); //2
-      p.ellipse(correctCanvasWidth / 2 - 210, correctCanvasHeight / 2 + 35, 45); //3
-      p.ellipse(correctCanvasWidth / 2 - 330, correctCanvasHeight / 2 + 105, 45); //4
-      p.ellipse(correctCanvasWidth / 2 - 270, correctCanvasHeight / 2 + 105, 45); //5
-      p.ellipse(correctCanvasWidth / 2 - 210, correctCanvasHeight / 2 + 105, 45); //6
-      p.ellipse(correctCanvasWidth / 2 - 330, correctCanvasHeight / 2 + 175, 45); //7
-      p.ellipse(correctCanvasWidth / 2 - 270, correctCanvasHeight / 2 + 175, 45); //8
-      p.ellipse(correctCanvasWidth / 2 - 210, correctCanvasHeight / 2 + 175, 45); //9
+
+      p.ellipse(correctCanvasWidth / 2 - 245, correctCanvasHeight / 2 - 80, 45); //1
+      p.ellipse(correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 - 80, 45); //2
+      p.ellipse(correctCanvasWidth / 2 - 125, correctCanvasHeight / 2 - 80, 45); //3
+      p.ellipse(correctCanvasWidth / 2 - 245, correctCanvasHeight / 2 - 10, 45); //4
+      p.ellipse(correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 - 10, 45); //5
+      p.ellipse(correctCanvasWidth / 2 - 125, correctCanvasHeight / 2 - 10, 45); //6
+      p.ellipse(correctCanvasWidth / 2 - 245, correctCanvasHeight / 2 + 65, 45); //7
+      p.ellipse(correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 + 65, 45); //8
+      p.ellipse(correctCanvasWidth / 2 - 125, correctCanvasHeight / 2 + 65, 45); //9
+      p.ellipse(correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 + 140, 45); //0
       p.pop(); //tasti
 
       p.push(); //text tasti
@@ -118,16 +129,16 @@ var sketch3 = function(p) {
       p.textAlign(p.CENTER);
       p.textFont('Montserrat');
       p.noStroke();
-      p.text('1', correctCanvasWidth / 2 - 330, correctCanvasHeight / 2 + 40);
-      p.text('2', correctCanvasWidth / 2 - 270, correctCanvasHeight / 2 + 40);
-      p.text('3', correctCanvasWidth / 2 - 210, correctCanvasHeight / 2 + 40);
-      p.text('4', correctCanvasWidth / 2 - 330, correctCanvasHeight / 2 + 110);
-      p.text('5', correctCanvasWidth / 2 - 270, correctCanvasHeight / 2 + 110);
-      p.text('6', correctCanvasWidth / 2 - 210, correctCanvasHeight / 2 + 110);
-      p.text('7', correctCanvasWidth / 2 - 330, correctCanvasHeight / 2 + 180);
-      p.text('8', correctCanvasWidth / 2 - 270, correctCanvasHeight / 2 + 180);
-      p.text('9', correctCanvasWidth / 2 - 210, correctCanvasHeight / 2 + 180);
-      p.text('0', correctCanvasWidth / 2 - 270, correctCanvasHeight / 2 + 250);
+      p.text('1', correctCanvasWidth / 2 - 245, correctCanvasHeight / 2 - 75);
+      p.text('2', correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 - 75);
+      p.text('3', correctCanvasWidth / 2 - 125, correctCanvasHeight / 2 - 75);
+      p.text('4', correctCanvasWidth / 2 - 245, correctCanvasHeight / 2 - 5);
+      p.text('5', correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 - 5);
+      p.text('6', correctCanvasWidth / 2 - 125, correctCanvasHeight / 2 - 5);
+      p.text('7', correctCanvasWidth / 2 - 245, correctCanvasHeight / 2 + 70);
+      p.text('8', correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 + 70);
+      p.text('9', correctCanvasWidth / 2 - 125, correctCanvasHeight / 2 + 70);
+      p.text('0', correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 + 145);
       p.pop(); //text tasti
 
     }
@@ -140,14 +151,14 @@ var sketch3 = function(p) {
       p.fill(150);
       p.stroke(0);
       p.strokeWeight(2);
-      p.ellipse(correctCanvasWidth / 2 - 270, correctCanvasHeight / 2 + 245, 45); //0
+      p.ellipse(correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 + 140, 45); //0
       p.pop();
 
     }
 
     if (i == 1) {
 
-      p.text('0', correctCanvasWidth / 2 - 330, correctCanvasHeight / 2 - 30);
+      p.text('0', correctCanvasWidth / 2 - 245, correctCanvasHeight / 2 - 145);
 
       primostep = 1;
       schiaccio = 1;
@@ -162,12 +173,12 @@ var sketch3 = function(p) {
       p.fill(150);
       p.stroke(0);
       p.strokeWeight(2);
-      p.ellipse(correctCanvasWidth / 2 - 330, correctCanvasHeight / 2 + 35, 45); //1
+      p.ellipse(correctCanvasWidth / 2 - 245, correctCanvasHeight / 2 - 80, 45); //1
       p.pop();
     }
     if (t == 1) {
 
-      p.text('1', correctCanvasWidth / 3 + 25, correctCanvasHeight / 2 - 30);
+      p.text('1', correctCanvasWidth / 2 - 170, correctCanvasHeight / 2 - 145);
 
       secondostep = 1;
       schiaccioquattro = 1;
@@ -212,12 +223,12 @@ var sketch3 = function(p) {
       p.fill(150);
       p.stroke(0);
       p.strokeWeight(2);
-      p.ellipse(correctCanvasWidth / 2 - 330, correctCanvasHeight / 2 + 175, 45); //7
+      p.ellipse(correctCanvasWidth / 2 - 245, correctCanvasHeight / 2 + 65, 45); //7
       p.pop();
     }
     if (s == 1) {
 
-      p.text('7', correctCanvasWidth / 3, correctCanvasHeight / 2 - 30);
+      p.text('7', correctCanvasWidth / 2 - 195, correctCanvasHeight / 2 - 145);
 
       ottavostep = 1;
       schiacciotre = 1;
@@ -230,13 +241,13 @@ var sketch3 = function(p) {
       p.fill(150);
       p.stroke(0);
       p.strokeWeight(2);
-      p.ellipse(correctCanvasWidth / 2 - 270, correctCanvasHeight/ 2 + 175, 45); //8
+      p.ellipse(correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 + 65, 45); //8
       p.pop();
     }
 
     if (k == 1) {
 
-      p.text('8', correctCanvasWidth / 3 - 25, correctCanvasHeight / 2 - 30);
+      p.text('8', correctCanvasWidth / 2 - 220, correctCanvasHeight / 2 - 145);
 
       nonostep = 1;
       schiacciodue = 1;
@@ -257,29 +268,29 @@ var sketch3 = function(p) {
     p.textAlign(p.CENTER);
     p.textFont('Montserrat');
     p.noStroke();
-    p.text('1', correctCanvasWidth / 2 - 330, correctCanvasHeight / 2 + 40);
-    p.text('2', correctCanvasWidth / 2 - 270, correctCanvasHeight / 2 + 40);
-    p.text('3', correctCanvasWidth / 2 - 210, correctCanvasHeight / 2 + 40);
-    p.text('4', correctCanvasWidth / 2 - 330, correctCanvasHeight / 2 + 110);
-    p.text('5', correctCanvasWidth / 2 - 270, correctCanvasHeight / 2 + 110);
-    p.text('6', correctCanvasWidth / 2 - 210, correctCanvasHeight / 2 + 110);
-    p.text('7', correctCanvasWidth / 2 - 330, correctCanvasHeight / 2 + 180);
-    p.text('8', correctCanvasWidth / 2 - 270, correctCanvasHeight / 2 + 180);
-    p.text('9', correctCanvasWidth / 2 - 210, correctCanvasHeight / 2 + 180);
-    p.text('0', correctCanvasWidth / 2 - 270, correctCanvasHeight / 2 + 250);
+    p.text('1', correctCanvasWidth / 2 - 245, correctCanvasHeight / 2 - 75);
+    p.text('2', correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 - 75);
+    p.text('3', correctCanvasWidth / 2 - 125, correctCanvasHeight / 2 - 75);
+    p.text('4', correctCanvasWidth / 2 - 245, correctCanvasHeight / 2 - 5);
+    p.text('5', correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 - 5);
+    p.text('6', correctCanvasWidth / 2 - 125, correctCanvasHeight / 2 - 5);
+    p.text('7', correctCanvasWidth / 2 - 245, correctCanvasHeight / 2 + 70);
+    p.text('8', correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 + 70);
+    p.text('9', correctCanvasWidth / 2 - 125, correctCanvasHeight / 2 + 70);
+    p.text('0', correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 + 145);
     p.pop(); // text tasti
 
   };
 
 
-  p.backgroundImage = function(imgBackground) {
-    p.push();
-    p.translate(correctCanvasWidth / 2, p.canvas.height / 2);
-    p.imageMode(p.CENTER);
-    let scale = Math.max(correctCanvasWidth / imgBackground.width, correctCanvasHeight / imgBackground.height);
-    p.image(imgBackground, correctCanvasWidth/2, correctCanvasHeight/2, imgBackground.width, imgBackground.height)
-    p.pop();
-  }
+  // p.backgroundImage = function(imgBackground) {
+  //   p.push();
+  //   p.translate(correctCanvasWidth / 2, p.canvas.height / 2);
+  //   p.imageMode(p.CENTER);
+  //   let scale = Math.max(correctCanvasWidth / imgBackground.width, correctCanvasHeight / imgBackground.height);
+  //   p.image(imgBackground, correctCanvasWidth/2, correctCanvasHeight/2, imgBackground.width, imgBackground.height)
+  //   p.pop();
+  // }
 
   p.windowResized = function() {
     p.resizeCanvas(correctCanvasWidth, correctCanvasHeight);
