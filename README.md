@@ -57,9 +57,9 @@ vari problemi
 ### Credits
 
 We used some ***p5 libreries***:
-* [p5.dom.min.js](https://p5js.org/reference/#/libraries/p5.dom) - To set webcam interaction
-* [p5.sound.min.js](https://p5js.org/reference/#/libraries/p5.sound) - To load sound
-* [p5.speech.js](http://ability.nyu.edu/p5.js-speech/) - To make the pc able to speak and understand what you say
+* [p5.dom.min.js](https://p5js.org/reference/#/libraries/p5.dom) - To set **webcam** interaction
+* [p5.sound.min.js](https://p5js.org/reference/#/libraries/p5.sound) - To **load and play** sound
+* [p5.speech.js](http://ability.nyu.edu/p5.js-speech/) - To make the pc able to **speak and understand** what you say
 
 
 
