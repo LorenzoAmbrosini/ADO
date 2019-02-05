@@ -1,12 +1,12 @@
 ![alt text](https://github.com/drawwithcode/2018-group-work-group-08/blob/master/imgr/logo.PNG)
 # Team members
-Lorenzo Ambrosini : lorenzo.ambrosini@mail.polimi.it, 
+**Lorenzo Ambrosini** : lorenzo.ambrosini@mail.polimi.it, 
 
-Davide Macchi : davidemacchi97@gmail.com, 
+**Davide Macchi** : davidemacchi97@gmail.com, 
 
-Matilde Mammana : matilde.mammana@gmail.com, 
+**Matilde Mammana** : matilde.mammana@gmail.com, 
 
-Giorgia Piacentini : giorgia.piacentini@mail.polimi.it
+**Giorgia Piacentini** : giorgia.piacentini@mail.polimi.it
 
 # Concept
 Have you ever tried to search the web for any kind of news and to notice how many different articles are found to talk about the same information?
