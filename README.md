@@ -17,17 +17,17 @@ In other cases, the concept assumes a metaphorical value and refers to all types
 
 # Project idea
 
-**Ado** significa: rumore, fastidio, confusione, ovvero il concetto predominante nel nostro progetto.
+**Ado** significa: rumore, fastidio, confusione, concetto predominante nel nostro progetto.
 Per rendere maggiormente chiaro questo concetto abbiamo scelto degli scenari specifici, dove la comunicare e capire informazioni risulta spesso difficile.
 
+###### Primo scenario:
+Il primo scenario che abbiamo scelto è una stazione di treni, luogo molto caotico dove quotidianamente è facile sbagliare treno, destinazione ed orario, per via dell'eccesso di informazioni presenti sui tabelloni, e del caos dovuto alla folla.
 
+###### Secondo scenario:
+Il secondo, e ultimo scenario, rappresenta la città trafficata, nel quale l'utente dovrà riuscire a prendere un taxi per raggiungere la sua destinazione. Anche la città, per via dei rumori del traffico e della grande quantità di cittadini, rappresenta l'ambiente perfetto per dimostrare quanto sia difficile comunicare e ricevere informazioni.
 
-###### rumore informativo 
+###### Interazioni:
 
-###### eccesso di informazione
-
-
-###### Le metafore che abbiamo scelto/ le situazioni
 
 
 # Code challenges
