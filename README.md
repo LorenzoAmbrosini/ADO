@@ -76,7 +76,7 @@ We found **interesting solutions** to our problems that we are going to show bel
 First of all, one of the most interesting solution is the one which makes the webcam understand if it's dark or bright on the room.
 
 
-``
+
 
     this.display = function() {
 
@@ -108,7 +108,7 @@ First of all, one of the most interesting solution is the one which makes the we
       p.text(_status, this.x + 800, this.y);
     }
     }
-``
+
 
 
 ## Inspirations/References
