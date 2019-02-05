@@ -26,7 +26,7 @@ p.setup = function() {
 
 
   p.frameRate(30);
-  var canvas =  p.createCanvas(1280, 720);
+  var canvas =  p.createCanvas(p.windowWidth, p.windowHeight);
   canvas.parent('sketch2');
   capture = p.createCapture(p.VIDEO);
   capture.size(640, 480);
