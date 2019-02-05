@@ -44,6 +44,7 @@ function draw() {
    image(home, 100, 100, home.width / 30 * scaleH, home.height / 30 * scaleH);
    pop(); // home
 
+   //title
    push();
    var x = windowWidth/2;
    var y = height/2-300 ;
@@ -53,6 +54,7 @@ function draw() {
    imageMode(CENTER);
    image(title, x, y, titleSize*1.2, titleSize/5);
    pop();
+   //title
 
    textAlign(CENTER);
    textSize(30);
