@@ -28,18 +28,18 @@ Per rendere maggiormente chiaro questo concetto abbiamo scelto degli scenari spe
 ### Our Aim
 bla bla bla bla per far capire il bla bla bla
 
-### Primo Scenario
-Il primo scenario che abbiamo scelto è una stazione di treni, luogo molto caotico dove quotidianamente è facile sbagliare treno, destinazione ed orario, per via dell'eccesso di informazioni presenti sui tabelloni, e del caos dovuto alla folla.
+### First scenary:
+The first scenary we have chosen is a **train station**, a very chaotic place where daily i's easy to take the wrong train, destination and time, because of the excess of information on the boards, and the chaos due to the crowd.
 
-### Secondo scenario:
-Il secondo, e ultimo scenario, rappresenta la città trafficata, nel quale l'utente dovrà riuscire a prendere un taxi per raggiungere la sua destinazione. Anche la città, per via dei rumori del traffico e della grande quantità di cittadini, rappresenta l'ambiente perfetto per dimostrare quanto sia difficile comunicare e ricevere informazioni.
+### Second scenary:
+The second, and last scenary, represents the **busy city**, where the user will have to be able to take a taxi to reach his destination. Even the city, due to traffic noise and large numbers of citizens, is the perfect environment to demonstrate how difficult it is to communicate and receive information.
 
-### Interazioni:
-Abbiamo scelto di utilizzare tre diversi tipi di interazioni, coerenti con il nostro tema.
+### Interaction:
+We have chosen three different kind of interaction, coherent with our theme.
 
-- Nel primo scenario è presente un'interazione con la **webcam** nel quale l'utente deve coprire la telecamera del proprio pc , come se nella realtà dovesse metaforicamente mettere a fuoco (restingendo l'obbietivo) la giusta informazione.
-- L'interazione che serve per accedere al secondo scenario, consiste nella **digitazione** di un numero **tramite tastiera**, per simulare la vera chiamata di un taxi.
-- L'ultima interazione, infine, avviene tramite il **microfono**, ovvero: l'utente dovrà parlare con il tassista e riportargli la popria destinazione. Di sottofondo, però, saranno presenti i rumori del traffico e delle voci dei cittadini, che renderanno questo processo più difficile e, allo stesso tempo, simile alla realtà. 
+- In the first scenary there is an interaction with the **webcam** in which the user has to cover the camera of his PC, as if in reality he metaphorically to focus (narrowing the objective) the right information.
+- The interaction that serves to access the second scenary, consists in **typing** a number **by the keyboard**, to simulate the real call of a taxi.
+- The last interaction, finally, takes place through the **microphone**, that is: the user will have to talk to the taxi driver and bring him back to the destination. In the background, however, traffic noises and voices of citizens will be present, which will make this process more difficult and, at the same time, similar to reality.
 
 
 
