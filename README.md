@@ -31,7 +31,11 @@ Il primo scenario che abbiamo scelto è una stazione di treni, luogo molto caoti
 Il secondo, e ultimo scenario, rappresenta la città trafficata, nel quale l'utente dovrà riuscire a prendere un taxi per raggiungere la sua destinazione. Anche la città, per via dei rumori del traffico e della grande quantità di cittadini, rappresenta l'ambiente perfetto per dimostrare quanto sia difficile comunicare e ricevere informazioni.
 
 ### Interazioni:
-Per le interazioni
+Abbiamo scelto di utilizzare tre diversi tipi di interazioni, coerenti con il nostro tema.
+
+- Nel primo scenario è presente un'interazione con la webcam nel quale l'utente deve coprire la telecamera del proprio pc , come se nella realtà dovesse metaforicamente mettere a fuoco (restingendo l'obbietivo) la giusta informazione.
+- L'interazione che serve per accedere al secondo scenario, consiste nella digitazione di un numero tramite tastiera, per simulare la vera chiamata di un taxi.
+- L'ultima interazione, infine, avviene tramite il microfono, ovvero: l'utente dovrà parlare con il tassista e riportargli la popria destinazione. Di sottofondo, però, saranno presenti i rumori del traffico e delle voci dei cittadini, che renderanno questo processo più difficile e, allo stesso tempo, simile alla realtà. 
 
 
 
