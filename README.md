@@ -8,7 +8,7 @@
 
 **Giorgia Piacentini** : giorgia.piacentini@mail.polimi.it
 
-![alt text](https://github.com/drawwithcode/2018-group-work-group-08/blob/master/imgr/giphy_1.gif)
+![alt text](https://github.com/drawwithcode/2018-group-work-group-08/blob/master/imgr/sonicear.jpg)
 
 # Concept
 Have you ever tried to search the web for any kind of news and to notice how many different articles are found to talk about the same information?
@@ -34,7 +34,7 @@ The first scenary we have chosen is a **train station**, a very chaotic place wh
 ### Second scenary:
 The second, and last scenary, represents the **busy city**, where the user will have to be able to take a taxi to reach his destination. Even the city, due to traffic noise and large numbers of citizens, is the perfect environment to demonstrate how difficult it is to communicate and receive information.
 
-### Interaction:
+### Interactions:
 We have chosen three different kind of interaction, coherent with our theme.
 
 - In the first scenary there is an interaction with the **webcam** in which the user has to cover the camera of his PC, as if in reality he metaphorically to focus (narrowing the objective) the right information.
