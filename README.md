@@ -46,11 +46,11 @@ The first scenary we have chosen is a **train station**, a very chaotic place wh
 The second, and last scenary, represents the **busy city**, where the user will have to be able to take a taxi to reach his destination. Even the city, due to traffic noise and large numbers of citizens, is the perfect environment to demonstrate how difficult it is to communicate and receive information.
 
 ## Interactions:
-We have chosen three different kind of interaction, coherent with our theme.
+We have chosen three different kind of interactions, coherent with our theme.
 
-- In the first scenary there is an interaction with the **webcam** in which the user has to cover the camera of his PC, as if in reality he metaphorically to focus (narrowing the objective) the right information.
-- The interaction that serves to access the second scenary, consists in **typing** a number **by the keyboard**, to simulate the real call of a taxi.
-- The last interaction, finally, takes place through the **microphone**, that is: the user will have to talk to the taxi driver and bring him back to the destination. In the background, however, traffic noises and voices of citizens will be present, which will make this process more difficult and, at the same time, similar to reality.
+- In the first scenary there is an interaction with the **webcam** in which the user has to cover the camera of his PC, as if in reality he metaphorically has to focus (narrowing the objective) on the right information.
+- The interaction that allows to access the second scenary, consists in **typing** a number **by the keyboard**, to simulate the real calling of a taxi.
+- The last interaction, at the end, takes place through the **microphone**: the user will have to talk to the taxi driver and carry him to the destination. In the background, however, traffic noises and voices of citizens will be present, which will make this process more difficult and, at the same time, similar to reality.
 
 
 
