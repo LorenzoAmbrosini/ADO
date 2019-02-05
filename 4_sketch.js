@@ -128,7 +128,7 @@ function draw() {
     textAlign(CENTER);
     textSize(20);
     fill('#fff250');
-    text('Lorem ipsum dolor sit amet, consectetur adipisci elit sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.', windowWidth / 2, windowHeight / 2, 500, 100);
+    text('You were lucky, the taxi you called arrived in perfect time.Now you have to tell the taxi driver your destination, which is the British Museum.\n Speak out loud because of traffic noise and the voices of the citizens are very strong, and pay attention to the time!', windowWidth / 2, windowHeight / 2, 500, 200);
     pop();
 
   }
