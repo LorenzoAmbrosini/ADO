@@ -82,6 +82,7 @@ var sketch3 = function(p) {
       p.stroke(0);
       p.strokeWeight(2);
       p.ellipse(correctCanvasWidth / 2 - 270, correctCanvasHeight / 2 + 245, 45); //0
+      
       p.ellipse(correctCanvasWidth / 2 - 330, correctCanvasHeight / 2 + 35, 45); //1
       p.ellipse(correctCanvasWidth / 2 - 270, correctCanvasHeight / 2 + 35, 45); //2
       p.ellipse(correctCanvasWidth / 2 - 210, correctCanvasHeight / 2 + 35, 45); //3
