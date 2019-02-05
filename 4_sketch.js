@@ -55,7 +55,7 @@ mySpeech.setLang('en-UK');
   mySpeech.setVolume(0.8);
 
   mySpeech.listVoices();
-  mySpeech.setVoice(3);
+  mySpeech.setVoice(49);
   mySpeech.setRate(0.8);
   mySpeech.setPitch(1);
 
@@ -87,7 +87,7 @@ mySpeech.setLang('en-UK');
   p.fill(50);
   p.noStroke();
   p.ellipseMode(p.CENTER);
-  p.ellipse(correctCanvasWidth - 200, 150, 70, 70);
+  p.ellipse(correctCanvasWidth - 70, 70, 70, 70);
   p.pop();
 
   p.push();
@@ -96,7 +96,7 @@ mySpeech.setLang('en-UK');
   p.textSize(30);
   p.fill(255)
   var correctCounter = p.round(counter /30);
-  p.text(correctCounter, correctCanvasWidth - 200, 160, x, y)
+  p.text(correctCounter, correctCanvasWidth - 70, 80, x, y)
 
   p.pop()
 
@@ -174,7 +174,7 @@ mySpeech.setLang('en-UK');
     p.rectMode(p.CORNER)
     p.textAlign(p.CENTER);
     p.fill("white");
-    p.rect(correctCanvasWidth/2 - 70, 105, 340, 100);
+    p.rect(correctCanvasWidth/2 - 70, 105, 340, 80);
     p.fill("black");
     p.textAlign(p.LEFT);
     p.textSize(25);
