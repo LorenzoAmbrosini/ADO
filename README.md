@@ -60,23 +60,27 @@ We have chosen three different kind of interactions, coherent with our theme.
 - The main difficulty has been to interface with a **new Javascript library** with its own way of code. It's hard to set a goal to reach if you don't deeply know the instruments you have to use. So this has been the first design challenge.
 - It was also difficult to find metaphors and **make them simple to understand** for the one who will use this website, but then we found them and it seems like they work well.
 - We *didn't want to focus on a single interaction* to represent a very complex phenomenon as the communication noise so we mainly choose to focus on 2 interactions with a direct link with communication: webcam for written informations and speech for verbally told information.
+- Something could have been done better but we have not more **time** than we already spendt on this project.
+
 
 ## Code challenges
-We were not masters in using p5.js (then we have become obviously;)) so we learnt to code watching **tutorials and reading some articles.** We don't even always found the perfect solutions for our problem but we **learnt how to solve** them. 
-We found out that p5 is not that supported for some kind of stuffs (speech recognition for exemple is not that easy to use) so sometimes find a solution is not that easy in some cases. Then we had problem with input beacuse not all browsers support the same API (speech recognition is not working on Firefox for exemple) so that our project seems to perfect work only on Google Chrome.
+We were not masters in using p5.js (then we have become obviously;)) so we learnt to code watching **tutorials and reading some articles.** We don't even always found the perfect solutions for our problem but **we learnt how to solve** them. 
 
+We found out that p5 is not that supported for some kind of stuffs (speech recognition for exemple is not that easy to use) so sometimes find a solution is not that easy in some cases. Then we had problem with input beacuse **not all browsers support the same API** so that our project seems to perfecty work only on Google Chrome.
+
+
+## Best Code Results
+**We have succeeded in coding all the interactions we wanted to do.**
+We found **interesting solutions** to our problems that we are going to show below.
+
+First of all, one of the most interesting solution is the one which makes the webcam understand if it's dark or bright on the room.
 
 
 ## Inspirations/References
 
 * [Communication Noise](https://en.wikipedia.org/wiki/Communication_noise) - What is **Communication noise**
 * [Information Theory](https://en.wikipedia.org/wiki/Information_theory) - Something about **Information Theory and noises** about transmission
-* [Communication Noise](https://en.wikipedia.org/wiki/Communication_noise) - What is **Communication noise**
-* [Information Theory](https://en.wikipedia.org/wiki/Information_theory) - Something about **Information Theory and noises** about transmission
-* [Communication Noise](https://en.wikipedia.org/wiki/Communication_noise) - What is **Communication noise**
-* [Information Theory](https://en.wikipedia.org/wiki/Information_theory) - Something about **Information Theory and noises** about transmission
-* [Communication Noise](https://en.wikipedia.org/wiki/Communication_noise) - What is **Communication noise**
-* [Information Theory](https://en.wikipedia.org/wiki/Information_theory) - Something about **Information Theory and noises** about transmission
+
 
 ## Credits
 
