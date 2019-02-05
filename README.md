@@ -106,7 +106,7 @@ For the graphics we used the following elements:
 
 - Strong colors like **yellow** (typically used for news as it calls attention) and **black**, neutral color that increases the contrast.
 - We kept the same contrast even between the fonts using a simple and linear for the texts, the **Montserrat**, and a more exuberant for the logo and some titles, the **Chrome Black**.
-- In the scenaries, finally, we used **illustrations** created by us.
+- In the scenaries, we used **illustrations**.
 
 
 # Course reference and academic year
