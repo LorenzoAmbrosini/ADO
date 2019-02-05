@@ -33,9 +33,9 @@ Il secondo, e ultimo scenario, rappresenta la città trafficata, nel quale l'ute
 ### Interazioni:
 Abbiamo scelto di utilizzare tre diversi tipi di interazioni, coerenti con il nostro tema.
 
-- Nel primo scenario è presente un'interazione con la webcam nel quale l'utente deve coprire la telecamera del proprio pc , come se nella realtà dovesse metaforicamente mettere a fuoco (restingendo l'obbietivo) la giusta informazione.
-- L'interazione che serve per accedere al secondo scenario, consiste nella digitazione di un numero tramite tastiera, per simulare la vera chiamata di un taxi.
-- L'ultima interazione, infine, avviene tramite il microfono, ovvero: l'utente dovrà parlare con il tassista e riportargli la popria destinazione. Di sottofondo, però, saranno presenti i rumori del traffico e delle voci dei cittadini, che renderanno questo processo più difficile e, allo stesso tempo, simile alla realtà. 
+- Nel primo scenario è presente un'interazione con la **webcam** nel quale l'utente deve coprire la telecamera del proprio pc , come se nella realtà dovesse metaforicamente mettere a fuoco (restingendo l'obbietivo) la giusta informazione.
+- L'interazione che serve per accedere al secondo scenario, consiste nella **digitazione** di un numero **tramite tastiera**, per simulare la vera chiamata di un taxi.
+- L'ultima interazione, infine, avviene tramite il **microfono**, ovvero: l'utente dovrà parlare con il tassista e riportargli la popria destinazione. Di sottofondo, però, saranno presenti i rumori del traffico e delle voci dei cittadini, che renderanno questo processo più difficile e, allo stesso tempo, simile alla realtà. 
 
 
 
