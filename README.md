@@ -39,10 +39,10 @@ Pay attention: giving a lot of informations is not always a good idea. Also keep
 ## First scenary:
 The first scenary we have chosen is a **train station**, a very chaotic place where daily i's easy to take the wrong train, destination and time, because of the excess of information on the boards, and the chaos due to the crowd.
 
-### Second scenary:
+## Second scenary:
 The second, and last scenary, represents the **busy city**, where the user will have to be able to take a taxi to reach his destination. Even the city, due to traffic noise and large numbers of citizens, is the perfect environment to demonstrate how difficult it is to communicate and receive information.
 
-### Interactions:
+## Interactions:
 We have chosen three different kind of interaction, coherent with our theme.
 
 - In the first scenary there is an interaction with the **webcam** in which the user has to cover the camera of his PC, as if in reality he metaphorically to focus (narrowing the objective) the right information.
@@ -51,14 +51,14 @@ We have chosen three different kind of interaction, coherent with our theme.
 
 
 
-### Code challenges
+## Code challenges
 asdduibasda
-### Design challenges
+## Design challenges
 gsiagiuasduiahs
-### Code challenges
+## Code challenges
 
 vari problemi
-### Inspirations/References
+## Inspirations/References
 
 * [Communication Noise](https://en.wikipedia.org/wiki/Communication_noise) - What is **Communication noise**
 * [Information Theory](https://en.wikipedia.org/wiki/Information_theory) - Something about **Information Theory and noises** about transmission
@@ -69,7 +69,7 @@ vari problemi
 * [Communication Noise](https://en.wikipedia.org/wiki/Communication_noise) - What is **Communication noise**
 * [Information Theory](https://en.wikipedia.org/wiki/Information_theory) - Something about **Information Theory and noises** about transmission
 
-### Credits
+## Credits
 
 We used some ***p5 libreries***:
 * [p5.dom.min.js](https://p5js.org/reference/#/libraries/p5.dom) - To set **webcam** interaction
