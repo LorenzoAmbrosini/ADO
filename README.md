@@ -38,12 +38,14 @@ Pay attention: giving a lot of informations is not always a good idea. Also keep
 
 **You should be careful when you decide to communicate something.**
 
+## The story and the metaphors
+In order to make people understand what we are talking about we used some metahpors and daily situation which can well represent the information noise.
 
 ## First scenary:
-The first scenary we have chosen is a **train station**, a very chaotic place where daily i's easy to take the wrong train, destination and time, because of the excess of information on the boards, and the chaos due to the crowd.
+The first scenary we have chosen is a **train station**, a very chaotic place where it's easy to take the wrong train because of the chaos due to the crowd and the excess of information- such as too informations about destinations and train schedule - on the boards.
 
 ## Second scenary:
-The second, and last scenary, represents the **busy city**, where the user will have to be able to take a taxi to reach his destination. Even the city, due to traffic noise and large numbers of citizens, is the perfect environment to demonstrate how difficult it is to communicate and receive information.
+The second, and last scenary, represents the **busy city**, where the user will have to be able to take a taxi to reach his destination. Even the city, due to the its traffic noise and the large numbers of citizens, is the perfect environment to demonstrate how difficult is to communicate and receive information in a noisy place.
 
 ## Interactions:
 We have chosen three different kind of interactions, coherent with our theme.
