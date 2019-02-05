@@ -32,12 +32,12 @@ Per le interazioni
 
 
 
-# Code challenges
-# Design challenges
-# Code challenges
+###### Code challenges
+###### Design challenges
+###### Code challenges
 
 vari problemi
-# Inspirations/References
+###### Inspirations/References
 .... bo
 # Credits (third libraries used)
 le librerie, disegni, bla bla 
