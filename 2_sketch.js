@@ -12,7 +12,7 @@ var correctCanvasWidth;
 var correctCanvasHeight;
 
 
-var counter = 450;
+var counter = 300;
 var interruttore;
 
 var colText = '255, 242, 80';
@@ -113,9 +113,11 @@ p.setup = function() {
       p.text("0" + ora + ":" + minuti, x + 860, 90);
       }
   }
-  else{
+  else if (minuti < 10) {
+    p.text(ora + ":0" + minuti, x + 860, 90);
+  } else {
     p.text(ora + ":" + minuti, x + 860, 90);
-  }
+    }
 
   p.pop();
 
