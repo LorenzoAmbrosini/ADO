@@ -93,6 +93,10 @@ We used some ***p5 libreries***:
 ***Sounds***: 
 * [People speaking](http://www.pacdv.com/sounds/people_sounds.html) - For the **sound** of the interactions
 
+
+
+
+
 # Visual
 
 ![alt text](https://github.com/drawwithcode/2018-group-work-group-08/blob/master/imgr/moodboard.jpg)
