@@ -63,7 +63,9 @@ We used some ***p5 libreries***:
 
 # Course reference and academic year
 Creative Coding 2018/2019 (https://drawwithcode.github.io/)
+
 Politecnico di Milano - Scuola del Design
+
 Faculty: Michele Mauri, Tommaso Elli
 
 
