@@ -28,7 +28,12 @@ On the other hand, it is also difficult to understand an information if we are i
 The term **`Ado`** is used to denote confusion, loss of time and trouble situation. We used this term as our logo naming refering to the fact that send a message and understand an information is often difficult.
 
 ### Our Aim
-Have you ever think about how noise can make your communications
+Have you ever think about how noise can make your act of communicate a failure? How many times you look at a screen full of informations and you don't find the one you need? 
+People often don't think about the phenomenon of the information noise and they suppose their speeches to be completely understandable in every situation. That not always happens instead. People also understimate with how many informations they keep in touch in a day, so many that the one they need is often too difficult to reach among the others. 
+People should give more attention about that when they communicate. 
+
+Pay attention: giving a lot of informations is not always a good idea. Also keep in mind your speeches can cover speeches of other people with the result that no communication act will be successfull. You should be careful when you decide to communicate something.
+
 
 ### First scenary:
 The first scenary we have chosen is a **train station**, a very chaotic place where daily i's easy to take the wrong train, destination and time, because of the excess of information on the boards, and the chaos due to the crowd.
