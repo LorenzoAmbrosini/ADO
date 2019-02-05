@@ -77,7 +77,8 @@ First of all, one of the most interesting solution is the one which makes the we
 
 
 ``
-this.display = function() {
+
+    this.display = function() {
 
     var c = capture.get(p.noise(capture.width / 2), p.noise(capture.height / 2));
 
