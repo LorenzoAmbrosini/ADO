@@ -8,7 +8,6 @@
 
 **Giorgia Piacentini** : giorgia.piacentini@mail.polimi.it
 
-![alt text](https://github.com/drawwithcode/2018-group-work-group-08/blob/master/imgr/sonicear.jpg)
 
 # Concept
 Have you ever tried to search the web for any kind of news and to notice how many different articles are found to talk about the same information?
@@ -83,8 +82,11 @@ We used some ***p5 libreries***:
 
 
 
-***Graphics*** and drawings:
-* [Freepik](https://www.freepik.com/) - Some illustrations we modified
+***Graphics*** and drawings, we used some websites to inspire us for our illustrations:
+* [Freepik](https://www.freepik.com/) 
+* [TheNounProject](https://thenounproject.com/it/) 
+* [Flaticon](https://www.flaticon.com/) 
+
 
 
 
