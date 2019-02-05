@@ -20,7 +20,7 @@ In other cases, the concept assumes a metaphorical value and refers to all types
 
 # The Project
 
-**Ado** `red --cli` significa: rumore, fastidio, confusione, concetto predominante nel nostro progetto.
+`**Ado**` significa: rumore, fastidio, confusione, concetto predominante nel nostro progetto.
 Per rendere maggiormente chiaro questo concetto abbiamo scelto degli scenari specifici, dove la comunicare e capire informazioni risulta spesso difficile.
 
 ### Our Aim
