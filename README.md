@@ -8,7 +8,6 @@
 
 **Giorgia Piacentini** : giorgia.piacentini@mail.polimi.it
 
-![alt text](https://github.com/drawwithcode/2018-group-work-group-08/blob/master/imgr/sonicear.jpg)
 
 # Concept
 Have you ever tried to search the web for any kind of news and to notice how many different articles are found to talk about the same information?
@@ -79,6 +78,12 @@ We used some ***p5 libreries***:
 # Visual
 
 ![alt text](https://github.com/drawwithcode/2018-group-work-group-08/blob/master/imgr/moodboard.jpg)
+
+For the graphics we used the following elements:
+
+- Strong colors like **yellow** (typically used for news as it calls attention) and **black**, neutral color that increases the contrast.
+- We kept the same contrast even between the fonts using a simple and linear for the texts, the **Montserrat**, and a more exuberant for the logo and some titles, the **Chrome Black**.
+- In the scenaries, finally, we used **illustrations** created by us.
 
 
 # Course reference and academic year
