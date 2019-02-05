@@ -44,9 +44,11 @@ Pay attention: giving a lot of informations is not always a good idea. Also keep
 In order to make people understand what we are talking about we used some metahpors and daily situation which can well represent the information noise.
 
 ## First scenary:
+![alt text](https://github.com/drawwithcode/2018-group-work-group-08/blob/master/imgr/logo.PNG)
 The first scenary we have chosen is a **train station**, a very chaotic place where it's easy to take the wrong train because of the chaos due to the crowd and the excess of information- such as too informations about destinations and train schedule - on the boards.
 
 ## Second scenary:
+![alt text](https://github.com/drawwithcode/2018-group-work-group-08/blob/master/imgr/logo.PNG)
 The second, and last scenary, represents the **busy city**, where the user will have to be able to take a taxi to reach his destination. Even the city, due to the its traffic noise and the large numbers of citizens, is the perfect environment to demonstrate how difficult is to communicate and receive information in a noisy place.
 
 ## Interactions:
@@ -110,6 +112,324 @@ Here it is the display function with some of the code lines.
     }
     }
 
+We also used a JSON file we created: https://github.com/drawwithcode/2018-group-work-group-08/blob/master/assets/2/data.json.
+
+In order to switch from the first interaction to the third (the one with speech recognition) we created a page where we worked with variables to make an animation of a **phone were you can type number.** We used **variables as buttons to enable and disable the typing on the keyboard.** We bet it is quite interesting how we did it even if it would seem a little complicated, so here our code lines:
+
+
+    var primostep = 0;
+    var secondostep = 0;
+    var terzostep = 0;
+    var quartostep = 0;
+    var quintostep = 0;
+    var sestostep = 0;
+    var settimostep = 0;
+    var ottavostep = 0;
+    var nonostep = 0;
+    var decimostep = 0;
+
+    var schiaccio = 0;
+    var schiacciodue = 0;
+
+    var schiacciotre = 0;
+    var schiaccioquattro = 0;
+    
+      p.draw = function() {
+      
+      if (p.keyIsPressed == true) {
+      p.push(); // tasti
+      p.fill('255');
+      p.stroke(0);
+      p.strokeWeight(2);
+      p.ellipse(correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 + 140, 45); //0
+      p.ellipse(correctCanvasWidth / 2 - 245, correctCanvasHeight / 2 - 80, 45); //1
+      p.ellipse(correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 - 80, 45); //2
+      p.ellipse(correctCanvasWidth / 2 - 125, correctCanvasHeight / 2 - 80, 45); //3
+      p.ellipse(correctCanvasWidth / 2 - 245, correctCanvasHeight / 2 - 10, 45); //4
+      p.ellipse(correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 - 10, 45); //5
+      p.ellipse(correctCanvasWidth / 2 - 125, correctCanvasHeight / 2 - 10, 45); //6
+      p.ellipse(correctCanvasWidth / 2 - 245, correctCanvasHeight / 2 + 65, 45); //7
+      p.ellipse(correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 + 65, 45); //8
+      p.ellipse(correctCanvasWidth / 2 - 125, correctCanvasHeight / 2 + 65, 45); //9
+      p.pop(); //tasti
+    }
+
+    if (p.keyIsPressed == false) {
+
+      p.push(); // tasti
+      p.fill(255);
+      p.stroke(0);
+      p.strokeWeight(2);
+
+      p.ellipse(correctCanvasWidth / 2 - 245, correctCanvasHeight / 2 - 80, 45); //1
+      p.ellipse(correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 - 80, 45); //2
+      p.ellipse(correctCanvasWidth / 2 - 125, correctCanvasHeight / 2 - 80, 45); //3
+      p.ellipse(correctCanvasWidth / 2 - 245, correctCanvasHeight / 2 - 10, 45); //4
+      p.ellipse(correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 - 10, 45); //5
+      p.ellipse(correctCanvasWidth / 2 - 125, correctCanvasHeight / 2 - 10, 45); //6
+      p.ellipse(correctCanvasWidth / 2 - 245, correctCanvasHeight / 2 + 65, 45); //7
+      p.ellipse(correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 + 65, 45); //8
+      p.ellipse(correctCanvasWidth / 2 - 125, correctCanvasHeight / 2 + 65, 45); //9
+      p.ellipse(correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 + 140, 45); //0
+      p.pop(); //tasti
+
+      p.push(); //text tasti
+      p.textSize(20);
+      p.textAlign(p.CENTER);
+      p.textFont('Montserrat');
+      p.noStroke();
+      p.text('1', correctCanvasWidth / 2 - 245, correctCanvasHeight / 2 - 75);
+      p.text('2', correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 - 75);
+      p.text('3', correctCanvasWidth / 2 - 125, correctCanvasHeight / 2 - 75);
+      p.text('4', correctCanvasWidth / 2 - 245, correctCanvasHeight / 2 - 5);
+      p.text('5', correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 - 5);
+      p.text('6', correctCanvasWidth / 2 - 125, correctCanvasHeight / 2 - 5);
+      p.text('7', correctCanvasWidth / 2 - 245, correctCanvasHeight / 2 + 70);
+      p.text('8', correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 + 70);
+      p.text('9', correctCanvasWidth / 2 - 125, correctCanvasHeight / 2 + 70);
+      p.text('0', correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 + 145);
+      p.pop(); //text tasti
+
+    }
+
+    if ((p.keyIsPressed == true) && (p.key == '0') && (primostep === 0) && (schiaccio === 0)) {
+
+      i = 1;
+
+      p.push();
+      p.fill(150);
+      p.stroke(0);
+      p.strokeWeight(2);
+      p.ellipse(correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 + 140, 45); //0
+      p.pop();
+
+    }
+
+    if (i == 1) {
+
+      p.text('0', correctCanvasWidth / 2 - 245, correctCanvasHeight / 2 - 145);
+
+      primostep = 1;
+      schiaccio = 1;
+
+    }
+
+    if ((p.keyIsPressed == true) && (p.key == '1') && (secondostep === 0) && (schiaccio === 1) && (schiacciodue === 1) && (schiacciotre === 1)) {
+
+      t = 1;
+
+      p.push();
+      p.fill(150);
+      p.stroke(0);
+      p.strokeWeight(2);
+      p.ellipse(correctCanvasWidth / 2 - 245, correctCanvasHeight / 2 - 80, 45); //1
+      p.pop();
+    }
+    if (t == 1) {
+
+      p.text('1', correctCanvasWidth / 2 - 170, correctCanvasHeight / 2 - 145);
+
+      secondostep = 1;
+      schiaccioquattro = 1;
+
+    }
+
+    if ((p.keyIsPressed == true) && (p.key == '2') && (terzostep === 1)) {
+
+      p.text('2', correctCanvasWidth / 3 + 100, correctCanvasHeight / 2);
+
+      terzostep = 1;
+    }
+    if ((p.keyIsPressed == true) && (p.key == '3') && (quartostep === 1)) {
+
+      p.text('3', correctCanvasWidth / 3 + 120, correctCanvasHeight / 2);
+
+      quartostep = 1;
+    }
+    if ((p.keyIsPressed == true) && (p.key == '4') && (quintostep === 1)) {
+
+      p.text('4', width / 3 + 160, height / 2);
+
+      quintostep = 1;
+    }
+    if ((p.keyIsPressed == true) && (p.key == '5') && (sestostep === 1)) {
+
+      p.text('5', correctCanvasWidth / 3 + 140, correctCanvasHeight / 2);
+
+      sestostep = 1;
+    }
+    if ((p.keyIsPressed == true) && (p.key == '6') && (settimostep === 1)) {
+
+      p.text('6', correctCanvasWidth / 3 + 120, correctCanvasHeight / 2);
+
+      settimostep = 1;
+    }
+    if ((p.keyIsPressed == true) && (p.key == '7') && (ottavostep === 0) && (schiaccio === 1) && (schiacciodue === 1)) {
+
+      s = 1;
+
+      p.push();
+      p.fill(150);
+      p.stroke(0);
+      p.strokeWeight(2);
+      p.ellipse(correctCanvasWidth / 2 - 245, correctCanvasHeight / 2 + 65, 45); //7
+      p.pop();
+    }
+    if (s == 1) {
+
+      p.text('7', correctCanvasWidth / 2 - 195, correctCanvasHeight / 2 - 145);
+
+      ottavostep = 1;
+      schiacciotre = 1;
+    }
+    if ((p.keyIsPressed == true) && (p.key == '8') && (nonostep === 0) && (schiaccio === 1)) {
+
+      k = 1;
+
+      p.push();
+      p.fill(150);
+      p.stroke(0);
+      p.strokeWeight(2);
+      p.ellipse(correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 + 65, 45); //8
+      p.pop();
+    }
+
+    if (k == 1) {
+
+      p.text('8', correctCanvasWidth / 2 - 220, correctCanvasHeight / 2 - 145);
+
+      nonostep = 1;
+      schiacciodue = 1;
+    }
+
+    if ((p.keyIsPressed == true) && (p.key == '9') && (decimostep === 1)) {
+
+      p.text('9', correctCanvasWidth / 3 + 180, correctCanvasHeight / 2);
+
+      decimostep = 1;
+    }
+    if (schiaccioquattro === 1) {
+      window.open("4_webcam.html", "_self")
+    }
+
+    p.push(); // text tasti
+    p.textSize(20);
+    p.textAlign(p.CENTER);
+    p.textFont('Montserrat');
+    p.noStroke();
+    p.text('1', correctCanvasWidth / 2 - 245, correctCanvasHeight / 2 - 75);
+    p.text('2', correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 - 75);
+    p.text('3', correctCanvasWidth / 2 - 125, correctCanvasHeight / 2 - 75);
+    p.text('4', correctCanvasWidth / 2 - 245, correctCanvasHeight / 2 - 5);
+    p.text('5', correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 - 5);
+    p.text('6', correctCanvasWidth / 2 - 125, correctCanvasHeight / 2 - 5);
+    p.text('7', correctCanvasWidth / 2 - 245, correctCanvasHeight / 2 + 70);
+    p.text('8', correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 + 70);
+    p.text('9', correctCanvasWidth / 2 - 125, correctCanvasHeight / 2 + 70);
+    p.text('0', correctCanvasWidth / 2 - 185, correctCanvasHeight / 2 + 145);
+    p.pop(); // text tasti
+
+     };
+     };
+     
+ Ok it will seems less complicated looking at the whole interaction on the screen. 
+ 
+ 
+ Then we guess it is quite interesting how we did the third interaction. We remixed sounds to create the sound of the page and we used **p5.speech.js** to **make pc speak and to enable the speech recognition**.
+ 
+ 
+     var myRec = new p5.SpeechRec(); // new P5.SpeechRec object
+     var song;
+     myRec.continuous = true; // do continuous recognition
+
+     var mySpeech = new p5.Speech();
+     mySpeech.setLang('en-UK');
+     
+     p.setup = function() {
+     
+     myRec.onResult = p.showResult;
+     mySpeech.setVolume(0.8);
+     mySpeech.listVoices();
+     mySpeech.setVoice(3);
+     mySpeech.setRate(0.8);
+     mySpeech.setPitch(1);
+    song.setVolume(0.3);
+    
+    p.noStroke();
+    p.ellipseMode(p.CENTER);
+    p.fill(50);
+    p.ellipse(p.windowWidth - 130, 100, 70, 70)
+    p.rectMode(p.CENTER);
+
+    interruttore = 1;
+    
+      }
+         p.showResult = function() {
+    if (myRec.onResult) {
+    //console.log("STO ASCOLTANDO");
+    p.push()
+    p.rectMode(p.CORNER)
+    p.textAlign(p.CENTER);
+    p.fill("white");
+    p.rect(correctCanvasWidth/2 - 70, 105, 340, 100);
+    p.fill("black");
+    p.textAlign(p.LEFT);
+    p.textSize(25);
+    p.text(myRec.resultString, correctCanvasWidth/2 - 60, 110, 330, 100);
+    p.fill(166, 237, 247);
+         p.pop();
+      }
+    }
+
+
+
+
+
+    p.mousePressed = function(){
+    if (p.mouseX >= correctCanvasWidth/2 - 50 &&
+      p.mouseX <= correctCanvasWidth/2 + 50 &&
+      p.mouseY >= correctCanvasHeight/2 + 130  &&
+      p.mouseY <= correctCanvasHeight/2 + 190) {
+        if (p.mouseButton == p.LEFT ) {
+           interruttore = 0;
+           console.log("click");
+           mySpeech.speak('Hey there! Where do you wanna go?');
+           myRec.start();
+           song.play();
+
+
+        }
+    }
+     }
+
+
+We also implement Timer countdown on the first and the second interaction.
+Here an exemple where a button enable the **countdown**:
+
+      var counter = 900;
+        p.setup = function() {
+        p.frameRate(30)
+        }
+       if (interruttore === 0){
+    p.countdown();
+    p.showResult();
+    }
+
+
+  
+    }
+
+     p.countdown = function() {
+     if (counter > 0) {
+     counter--;
+
+    }
+    if (counter == 0) {
+    window.open("5_final.html", "_self")
+    }
+   }
+ 
+       
 
 
 ## Inspirations/References
@@ -124,6 +444,7 @@ We used some ***p5 libreries***:
 * [p5.dom.min.js](https://p5js.org/reference/#/libraries/p5.dom) - To set **webcam** interaction
 * [p5.sound.min.js](https://p5js.org/reference/#/libraries/p5.sound) - To **load and play** sound
 * [p5.speech.js](http://ability.nyu.edu/p5.js-speech/) - To make the pc able to **speak and understand** what you say
+* [Train Schedule JSON](https://github.com/drawwithcode/2018-group-work-group-08/blob/master/assets/2/data.json) - We created a **JSON  file**for the Train Schedule of the first interaction.
 
 
 
