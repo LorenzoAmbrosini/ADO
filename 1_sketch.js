@@ -8,7 +8,6 @@ var colRect = 0;
 function preload() {
   imgBackground = loadImage("./assets/1/sfondo.png");
   logo = loadImage("./assets/1/logo.png");
-
 }
 
 function setup() {
@@ -31,7 +30,6 @@ function draw() {
   image(logo, x, y, logoSize * 1.1, logoSize / 2);
   pop();
   //logo
-
 
   changeCol(); // cambia colore button
 
