@@ -28,7 +28,7 @@ function draw() {
   var sizeOffset = (sin(phase)+30);
   var logoSize = sizeOffset * maxLogoSize;
   imageMode(CENTER);
-  image(logo, x, y, logoSize*1.2, logoSize/2);
+  image(logo, x, y, logoSize*1.1, logoSize/2);
   pop();
   //logo
 
@@ -59,8 +59,6 @@ function draw() {
   text('Sometimes it\'s hard to communicate.',-10, 70);
   text('Sometimes it\'s hard to understand.',-10, 120);
   //claim
-
-
 }
 
 function mousePressed() {
