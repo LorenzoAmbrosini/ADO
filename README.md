@@ -8,8 +8,6 @@ Matilde Mammana : matilde.mammana@gmail.com,
 
 Giorgia Piacentini : giorgia.piacentini@mail.polimi.it
 
-# img
-< gif dei discorsi/ dei punti di domanda
 # Concept
 Have you ever tried to search the web for any kind of news and to notice how many different articles are found to talk about the same information?
 In fact, today, because of the multiple channels of information present, it's often difficult to capture the right information. 
