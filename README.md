@@ -42,7 +42,7 @@ Per le interazioni
 vari problemi
 ### Inspirations/References
 .... bo
-# Credits (third libraries used)
+### Credits (third libraries used)
 le librerie, disegni, bla bla 
 
 
