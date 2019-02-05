@@ -73,7 +73,8 @@ We found out that p5 is not that supported for some kind of stuffs (speech recog
 **We have succeeded in coding all the interactions we wanted to do.**
 We found **interesting solutions** to our problems that we are going to show below.
 
-First of all, one of the most interesting solution is the one which makes the webcam understand if it's dark or bright on the room.
+First of all, one of the most interesting solution is the one which makes the webcam understand if it's dark or bright on the room and it will show different writings according to bright value.
+Here it is the display function with some of the code lines.
 
 
 
