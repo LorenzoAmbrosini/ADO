@@ -13,6 +13,7 @@ Have you ever tried to search the web for any kind of news and to notice how man
 In fact, today, because of the multiple channels of information present, it's often difficult to capture the right information. 
 In the information theory the word **NOISE** indicates everything that intervenes between the transmitter and the receiver, compromising the effectiveness of the communication (it is essentially a technical interference).
 In other cases, the concept assumes a metaphorical value and refers to all types of disturbances that can intervene in the communicative process, reducing its effectiveness or even compromising the result.
+![alt text](https://github.com/drawwithcode/2018-group-work-group-08/blob/master/imgr/schema.jpg)
 
 # Project idea
 
