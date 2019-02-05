@@ -8,6 +8,8 @@
 
 **Giorgia Piacentini** : giorgia.piacentini@mail.polimi.it
 
+![alt text](https://github.com/drawwithcode/2018-group-work-group-08/blob/master/imgr/giphy_1.gif)
+
 # Concept
 Have you ever tried to search the web for any kind of news and to notice how many different articles are found to talk about the same information?
 In fact, today, because of the multiple channels of information present, it's often difficult to capture the right information. 
