@@ -48,7 +48,7 @@ In order to make people understand what we are talking about we used some metahp
 The first scenary we have chosen is a **train station**, a very chaotic place where it's easy to take the wrong train because of the chaos due to the crowd and the excess of information- such as too informations about destinations and train schedule - on the boards.
 
 ## Second scenary:
-![alt text](https://github.com/drawwithcode/2018-group-work-group-08/blob/master/assets/sfondointerazione.jpg)
+![alt text](https://github.com/drawwithcode/2018-group-work-group-08/blob/master/imgr/logo.PNG)
 The second, and last scenary, represents the **busy city**, where the user will have to be able to take a taxi to reach his destination. Even the city, due to the its traffic noise and the large numbers of citizens, is the perfect environment to demonstrate how difficult is to communicate and receive information in a noisy place.
 
 ## Interactions:
