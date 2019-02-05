@@ -33,7 +33,9 @@ The term **`Ado`** is used to denote confusion, loss of time and trouble situati
 People often don't think about the phenomenon of the information noise and they suppose their speeches to be completely understandable in every situation. That not always happens instead. People also understimate with how many informations they keep in touch in a day, so many that the one they need is often too difficult to reach among the others. 
 People should give more attention about that when they communicate. 
 
-Pay attention: giving a lot of informations is not always a good idea. Also keep in mind your speeches can cover speeches of other people with the result that no communication act will be successfull. **You should be careful when you decide to communicate something.**
+Pay attention: giving a lot of informations is not always a good idea. Also keep in mind your speeches can cover speeches of other people with the result that no communication act will be successfull. 
+
+**You should be careful when you decide to communicate something.**
 
 
 ## First scenary:
