@@ -1,7 +1,7 @@
 var imgBackground;
 
 function preload() {
-  imgBackground = loadImage("backtaxi.jpg");
+  imgBackground = loadImage("./assets/3/backtaxi.jpg");
 }
 
 function setup(){
