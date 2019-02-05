@@ -244,7 +244,7 @@ p.setup = function() {
     counter--;
   }
   if (counter == 0) {
-    window.open("3_intermezzo.html", "_self")
+    window.open("3_tastiera.html", "_self")
   }
 };
 
