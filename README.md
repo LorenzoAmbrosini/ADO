@@ -1,4 +1,3 @@
-# Ado
 ![alt text](https://github.com/drawwithcode/2018-group-work-group-08/blob/master/imgr/logo.PNG)
 # Team members
 Lorenzo Ambrosini, Davide Macchi, Matilde Mammana, Giorgia Piacentini
