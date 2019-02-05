@@ -20,7 +20,6 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   textFont('Montserrat');
   background(25);
-
 }
 
 function draw() {
