@@ -16,10 +16,13 @@ In other cases, the concept assumes a metaphorical value and refers to all types
 
 ![alt text](https://github.com/drawwithcode/2018-group-work-group-08/blob/master/imgr/schema.jpg)
 
-# Project idea
+# The Project
 
 **Ado** significa: rumore, fastidio, confusione, concetto predominante nel nostro progetto.
 Per rendere maggiormente chiaro questo concetto abbiamo scelto degli scenari specifici, dove la comunicare e capire informazioni risulta spesso difficile.
+
+### Our Aim
+bla bla bla bla per far capire il bla bla bla
 
 ### Primo Scenario
 Il primo scenario che abbiamo scelto è una stazione di treni, luogo molto caotico dove quotidianamente è facile sbagliare treno, destinazione ed orario, per via dell'eccesso di informazioni presenti sui tabelloni, e del caos dovuto alla folla.
