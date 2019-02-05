@@ -1,5 +1,6 @@
 ![alt text](https://github.com/drawwithcode/2018-group-work-group-08/blob/master/imgr/logo.PNG)
-###### Our project perfectly works on Google Chrome. It is not working well on all browers due to problems with API 
+###### Our project perfectly works on Google Chrome. It seems like it's not working well on all browers due to problems with API, hope it will work also on other browsers in future.
+
 # Team members
 **Lorenzo Ambrosini** : lorenzo.ambrosini@mail.polimi.it, 
 
