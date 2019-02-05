@@ -1,7 +1,7 @@
 var imgBackground;
 var logo;
 var maxLogoSize = 20;
-var phase = -10 ;
+var phase = -10;
 var colText = '255, 242, 80';
 var colRect = 0;
 
@@ -20,20 +20,21 @@ function setup() {
 function draw() {
   backgroundImage(imgBackground);
 
-//logo
+  //logo
   push();
-  var x = windowWidth/2;
-  var y = windowHeight/2-180 ;
-  phase = frameCount/5 ;
-  var sizeOffset = (sin(phase)+30);
+  var x = windowWidth / 2;
+  var y = windowHeight / 2 - 180;
+  phase = frameCount / 5;
+  var sizeOffset = (sin(phase) + 30);
   var logoSize = sizeOffset * maxLogoSize;
   imageMode(CENTER);
-  image(logo, x, y, logoSize*1.1, logoSize/2);
+  image(logo, x, y, logoSize * 1.1, logoSize / 2);
   pop();
   //logo
 
 
   changeCol(); // cambia colore button
+
   push(); // button
   stroke(255, 242, 80);
   strokeWeight(2);
@@ -56,8 +57,8 @@ function draw() {
   textSize(35);
   fill(255, 242, 80);
 
-  text('Sometimes it\'s hard to communicate.',-10, 70);
-  text('Sometimes it\'s hard to understand.',-10, 120);
+  text('Sometimes it\'s hard to communicate', -10, 70);
+  text('Sometimes it\'s hard to understand', -10, 120);
   //claim
 }
 
@@ -80,20 +81,12 @@ function backgroundImage(imgBackground) {
 
 }
 
-/*function mouseClicked() {
-  if (mouseX >= width / 2 - 87.5 &&
-    mouseX <= width / 2 - 87.5 + 175 &&
-    mouseY >= height / 2 + 130 &&
-    mouseY <= height / 2 + 130 + 60) {
-    button = true;
-    }
-}*/
 
 function changeCol() {
   if (mouseX >= width / 2 - 87.5 &&
-    mouseX <= width / 2 - 87.5 + 175 &&
-    mouseY >= height / 2 + 130 &&
-    mouseY <= height / 2 + 130 + 60) {
+    mouseX <= width / 2 + 87.5 &&
+    mouseY >= height / 2 + 200 - 30 &&
+    mouseY <= height / 2 + 200 + 30) {
     colText = 0;
     colRect = '#fff250';
   } else {
