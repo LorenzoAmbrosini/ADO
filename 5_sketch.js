@@ -83,7 +83,7 @@ var sketch5 = function(p) {
     p.push(); //text popup
     p.textAlign(p.LEFT);
     p.textSize(19);
-    p.text('In the information theory the word NOISE indicates everything that intervenes between the transmitter, and the receiver, compromising the effectiveness \nof the communication (it is essentially a technical interference). \nIn other cases the concept assumes a metaphorical value and refers to all types of disturbances that can intervene in the communicative process, reducing \nits effectiveness or even compromising the result. \nThe concept of INFORMATION NOISE in psychology and semiotics,"is a disorder caused by the excess \nof information, such that even the potentially useful element is not recognized, not even identified, \nor identified with difficulty". ',
+    p.text('In the information theory the word NOISE indicates everything that intervenes between the transmitter, and the receiver, compromising the effectiveness \nof the communication (it is essentially a technical interference). \nIn other cases the concept assumes a metaphorical value and refers to all types of disturbances that can intervene in the communicative process, reducing \nits effectiveness or even compromising the result. \nThe concept of INFORMATION NOISE in psychology and semiotics, "is a disorder caused by the excess \nof information, such that even the potentially useful element is not recognized, not even identified, \nor identified with difficulty". ',
     correctCanvasWidth / 2 - 20, correctCanvasHeight / 2 - 140, 520, 450, 5);
     p.pop(); // text pop
 
