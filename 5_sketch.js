@@ -115,7 +115,6 @@ var sketch5 = function(p) {
       p.mouseY >= correctCanvasHeight/2 + 240 &&
       p.mouseY <= correctCanvasHeight/2 + 300){
         window.open("https://en.wikipedia.org/wiki/Communication_noise");
-        console.log("click")
     }
 
     if(p.mouseX >= 25 &&
